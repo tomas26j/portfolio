@@ -52,8 +52,8 @@ export default function Hero() {
         </div>
         <div className="relative w-full h-[500px]">
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/man-OSBSz61PUl3weZitEy4ul5NalxyyUk.png"
-            alt="Mysterious person in hoodie"
+            src="/new project-4.png"
+            alt="Retrato en arte ASCII"
             layout="fill"
             objectFit="contain"
             className="rounded-lg"
