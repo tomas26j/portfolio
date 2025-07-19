@@ -3,5 +3,6 @@ import { getLocale } from 'next-intl/server';
 
 export default async function RootPage() {
   const locale = await getLocale();
-  redirect(`/${locale}`);
+  const basePath = process.env.NODE_ENV === 'production' ? '/portfolio' : '';
+  redirect(`${basePath}/${locale}`);
 }

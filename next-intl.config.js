@@ -1,5 +1,6 @@
 module.exports = {
   locales: ['es', 'en'],
-  defaultLocale: 'en',
-  localeDetection: true
+  defaultLocale: 'es',
+  localeDetection: true,
+  basePath: process.env.NODE_ENV === 'production' ? '/portfolio' : ''
 };
