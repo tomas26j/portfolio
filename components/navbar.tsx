@@ -19,12 +19,11 @@ export function Navbar() {
 
   // Cambia el idioma manteniendo la sección/hash si es posible
   const handleLocaleChange = (locale: string) => {
-    const basePath = process.env.NODE_ENV === 'production' ? '/portfolio' : '';
     let rest = pathname?.split('/').slice(2).join('/') || '';
     if (rest) rest = '/' + rest;
     // Mantiene el hash si existe
     const hash = window.location.hash || '';
-    router.push(`${basePath}/${locale}${rest}${hash}`);
+    router.push(`/${locale}${rest}${hash}`);
   };
 
   useEffect(() => {
