@@ -1,6 +1,5 @@
 "use client";
 import { useTheme } from 'next-themes';
-import { useState, useEffect } from 'react';
 import Hero from '@/components/hero';
 import AboutMe from '@/components/about-me';
 import Projects from '@/components/projects';
@@ -10,32 +9,18 @@ import { Navbar } from '@/components/navbar';
 import LearningPath from '@/components/learning-path';
 import CertificationCarousel from '@/components/CertificationCarousel';
 
+// Función necesaria para generar páginas estáticas
+export async function generateStaticParams() {
+  return [
+    { locale: 'es' },
+    { locale: 'en' }
+  ];
+}
+
 export default function Home() {
-  const { resolvedTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-  const [currentTheme, setCurrentTheme] = useState('dark');
-
-  useEffect(() => {
-    setMounted(true);
-    setCurrentTheme(resolvedTheme || 'dark');
-  }, [resolvedTheme]);
-
-  // Renderizar un placeholder mientras se monta para evitar problemas de hidratación
-  if (!mounted) {
-    return (
-      <main className="min-h-screen bg-background relative">
-        <div className="absolute inset-0 pointer-events-none opacity-70 dark:opacity-20 bg-repeat" style={{ backgroundSize: '600px 600px' }} />
-        <Navbar />
-        <Hero />
-        <AboutMe />
-        <LearningPath />
-        <Projects />
-        <CertificationCarousel />
-        <Experience />
-        <Contact />
-      </main>
-    );
-  }
+  const { theme, resolvedTheme } = useTheme();
+  // Usar resolvedTheme para evitar problemas de hidratación
+  const currentTheme = resolvedTheme || 'dark';
   
   return (
     <main className="min-h-screen bg-background relative">
