@@ -6,6 +6,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { setupIntersectionObserver } from "@/lib/animations"
 import { useTranslations } from 'next-intl';
+import { getStaticPath } from '@/lib/utils';
 
 // Componente de carrusel de imágenes
 const ImageCarousel = ({ images, title }: { images: string[]; title: string }) => {
@@ -116,11 +117,11 @@ export default function Projects() {
       title: tContent('cancunTitle'),
       description: tContent('cancunDesc'),
       images: [
-        "/cancun.com.ar/cancun-com-ar_00.png",
-        "/cancun.com.ar/cancun-com-ar_0.png",
-        "/cancun.com.ar/cancun-com-ar_1.png",
-        "/cancun.com.ar/cancun-com-ar_2.png",
-        "/cancun.com.ar/cancun-com-ar_3.png",
+        getStaticPath("/cancun.com.ar/cancun-com-ar_00.png"),
+        getStaticPath("/cancun.com.ar/cancun-com-ar_0.png"),
+        getStaticPath("/cancun.com.ar/cancun-com-ar_1.png"),
+        getStaticPath("/cancun.com.ar/cancun-com-ar_2.png"),
+        getStaticPath("/cancun.com.ar/cancun-com-ar_3.png"),
       ],
       tech: ["WordPress", "JavaScript", "PHP", "Elementor"],
       inspiration: "Inspired by CosmoWP's travel template",
@@ -133,9 +134,9 @@ export default function Projects() {
       title: tContent('burbankTitle'),
       description: tContent('burbankDesc'),
       images: [
-        "/burbankdetoxcenter/Burbank-Detox-Center_1.png",
-        "/burbankdetoxcenter/Burbank-Detox-Center_2.png",
-        "/burbankdetoxcenter/Burbank-Detox-Center_3.png",
+        getStaticPath("/burbankdetoxcenter/Burbank-Detox-Center_1.png"),
+        getStaticPath("/burbankdetoxcenter/Burbank-Detox-Center_2.png"),
+        getStaticPath("/burbankdetoxcenter/Burbank-Detox-Center_3.png"),
       ],
       tech: ["WordPress", "PHP", "CSS3", "JavaScript"],
       inspiration: "Custom business template design",
@@ -151,9 +152,9 @@ export default function Projects() {
       title: tContent('sacabollosTitle'),
       description: tContent('sacabollosDesc'),
       images: [
-        "/sacabolloquintana/sacabollos-quintana_0.png",
-        "/sacabolloquintana/sacabollos-quintana_1.png",
-        "/sacabolloquintana/sacabollos-quintana_2.png",
+        getStaticPath("/sacabolloquintana/sacabollos-quintana_0.png"),
+        getStaticPath("/sacabolloquintana/sacabollos-quintana_1.png"),
+        getStaticPath("/sacabolloquintana/sacabollos-quintana_2.png"),
       ],
       tech: ["Vue", "React", "Styled Components", "CSS"],
       links: {
@@ -165,11 +166,11 @@ export default function Projects() {
       title: tContent('uchronoTitle'),
       description: tContent('uchronoDesc'),
       images: [
-        "/uchrono/uchrono_0.png",
-        "/uchrono/uchrono_1.png",
-        "/uchrono/uchrono_2.png",
-        "/uchrono/uchrono_3.png",
-        "/uchrono/uchrono_4.png",
+        getStaticPath("/uchrono/uchrono_0.png"),
+        getStaticPath("/uchrono/uchrono_1.png"),
+        getStaticPath("/uchrono/uchrono_2.png"),
+        getStaticPath("/uchrono/uchrono_3.png"),
+        getStaticPath("/uchrono/uchrono_4.png"),
       ],
       tech: ["React", "Craco", "Radix UI", "Tailwind CSS", "Chart.js", "Node.js"],
       features: ["Multi APIs Integration", "Investment Calculator", "Timeline Visualization", "Curated Scenarios"],
@@ -182,11 +183,11 @@ export default function Projects() {
       title: tContent('trackerhubTitle'),
       description: tContent('trackerhubDesc'),
       images: [
-        "/trackerhub/TrackerHub_0.png",
-        "/trackerhub/TrackerHub_1.png",
-        "/trackerhub/TrackerHub_2.png",
-        "/trackerhub/TrackerHub_4.png",
-        "/trackerhub/TrackerHub_5.png",
+        getStaticPath("/trackerhub/TrackerHub_0.png"),
+        getStaticPath("/trackerhub/TrackerHub_1.png"),
+        getStaticPath("/trackerhub/TrackerHub_2.png"),
+        getStaticPath("/trackerhub/TrackerHub_4.png"),
+        getStaticPath("/trackerhub/TrackerHub_5.png"),
       ],
       tech: ["React", "TailwindCSS", "", "Express.js", "Sequelize", "React", "Redux"],
       features: ["Trip CRUD", "Search by name and filters", "REST Countries API integration"],
@@ -201,42 +202,42 @@ export default function Projects() {
     {
       title: tMini('meliTitle'),
       description: tMini('meliDesc'),
-      image: "/miniprojects/Mercado-Libre-Clone_0.png",
+      image: getStaticPath("/miniprojects/Mercado-Libre-Clone_0.png"),
       tech: ["React", "TailwindCSS"],
       links: { github: "https://github.com/tomas26j/MELI-UI-CLON", demo: "https://tomas26j-meli-clone.netlify.app/" },
     },
     {
       title: tMini('sushiTitle'),
       description: tMini('sushiDesc'),
-      image: "/miniprojects/Sushi-bot_0.png",
+      image: getStaticPath("/miniprojects/Sushi-bot_0.png"),
       tech: ["JavaScript", "API"],
       links: { github: "https://github.com/tomas26j/Chatbot-code-challenge", demo: "#" },
     },
     {
       title: tMini('todoTitle'),
       description: tMini('todoDesc'),
-      image: "/miniprojects/Gestor-De-Tareas_0.png",
+      image: getStaticPath("/miniprojects/Gestor-De-Tareas_0.png"),
       tech: ["TypeScript", "React", "TailwindCSS"],
       links: { github: "https://github.com/tomas26j/ChallengeForIT", demo: "#" },
     },
     {
       title: tMini('videoSpeedTitle'),
       description: tMini('videoSpeedDesc'),
-      image: "/miniprojects/Universal-video-speed.png",
+      image: getStaticPath("/miniprojects/Universal-video-speed.png"),
       tech: ["React", "CSS3"],
       links: { github: "https://github.com/tomas26j/UniversalVideoSpeed", demo: "#" },
     },
     {
       title: tMini('linkBioTitle'),
       description: tMini('linkBioDesc'),
-      image: "/miniprojects/Link-In-Bio_0.png",
+      image: getStaticPath("/miniprojects/Link-In-Bio_0.png"),
       tech: ["JavaScript", "CSS"],
       links: { github: "#", demo: "#" },
     },
     {
       title: tMini('pomodoroTitle'),
       description: tMini('pomodoroDesc'),
-      image: "/miniprojects/Pomodoro-Timer_0.png",
+      image: getStaticPath("/miniprojects/Pomodoro-Timer_0.png"),
       tech: ["React", "Context API"],
       links: { github: "https://github.com/tomas26j/vibrant-pomodoro-timer", demo: "https://vibrant-pomodoro-timer.vercel.app/" },
     },
