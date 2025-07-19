@@ -13,25 +13,25 @@ const CertificationCarousel: React.FC = () => {
       titulo: t('jse1Title'),
       descripcion: t('jse1Desc'),
       linkInsignia: "https://www.credly.com/badges/f5c111b0-dde6-4a3e-b6cc-bc6b725664b2",
-      urlImagen: getStaticPath("/Badge_JSE1-tcP0naN4TjsEEPyGA9iB6x1B83VUsR.png")
+      urlImagen: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Badge_JSE1-tcP0naN4TjsEEPyGA9iB6x1B83VUsR.png"
     },
     {
       titulo: t('jse2Title'),
       descripcion: t('jse2Desc'),
       linkInsignia: "https://www.credly.com/badges/6c5928d5-dff3-45ed-93f6-7ea5124f77e1",
-      urlImagen: getStaticPath("/Badge_JSE2-QVtPB3GyAzC3Zbll4Mfqzh732iOZhs.png")
+      urlImagen: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Badge_JSE2-QVtPB3GyAzC3Zbll4Mfqzh732iOZhs.png"
     },
     {
       titulo: t('osbTitle'),
       descripcion: t('osbDesc'),
       linkInsignia: "https://www.credly.com/badges/b45ede93-b62c-4cae-be95-60c2744daf02",
-      urlImagen: getStaticPath("/Badge_OSB-ZJcUUPtymBSoaLlJbxzdVP1L5XK1K3.png")
+      urlImagen: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Badge_OSB-ZJcUUPtymBSoaLlJbxzdVP1L5XK1K3.png"
     },
     {
       titulo: t('eit2Title'),
       descripcion: t('eit2Desc'),
       linkInsignia: "https://www.credly.com/badges/b45ede93-b62c-4cae-be95-60c2744daf02",
-      urlImagen: getStaticPath("/Badge_EIT2-jOaM6ioyeP1nQkyxaAcTXGjfGik9ea.png")
+      urlImagen: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Badge_EIT2-jOaM6ioyeP1nQkyxaAcTXGjfGik9ea.png"
     }
   ];
 
