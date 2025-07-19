@@ -15,6 +15,12 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  // Configuración para archivos estáticos
+  experimental: {
+    appDir: true,
+  },
+  // Asegurar que los archivos estáticos se copien correctamente
+  distDir: 'out',
 };
 
 // Exporta la configuración envuelta con el plugin de next-intl

@@ -6,6 +6,7 @@ import Image from "next/image"
 import { useEffect, useState } from 'react'
 import { setupIntersectionObserver } from '@/lib/animations'
 import { useTranslations } from 'next-intl';
+import { getStaticPath } from '@/lib/utils';
 
 export default function Hero() {
   const t = useTranslations('hero');
@@ -19,7 +20,7 @@ export default function Hero() {
     setIsDownloading(true);
     try {
       // Intentar descargar el PDF
-      const response = await fetch('/Tomas_Riera_CV.pdf');
+      const response = await fetch(getStaticPath('/Tomas_Riera_CV.pdf'));
       
       if (!response.ok) {
         throw new Error('PDF no encontrado');
@@ -91,11 +92,10 @@ export default function Hero() {
         </div>
         <div className="relative w-full h-[500px]">
           <Image
-            src="/New Project-4.png"
+            src={getStaticPath("/New Project-4.png")}
             alt="Retrato en arte ASCII"
-            layout="fill"
-            objectFit="contain"
-            className="rounded-lg"
+            fill
+            className="object-contain rounded-lg"
           />
         </div>
       </div>
