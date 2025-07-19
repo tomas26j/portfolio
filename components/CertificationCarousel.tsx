@@ -3,40 +3,42 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Card, CardContent } from "@/components/ui/card"
-
-const certifications = [
-  {
-    titulo: "JavaScript Essentials 1",
-    descripcion: "Cisco, in collaboration with OpenEDG JS Institute, verifies the earner of this badge successfully completed the JavaScript Essentials 1 course and achieved the student level credentials. Earners know the syntax of the core JavaScript; can work with variables, operators, flow control, and functions; know the basics of data types system; think algorithmically and can analyze problems using a programmatic conceptual apparatus; and can design, develop, and improve simple JavaScript programs.",
-    linkInsignia: "https://www.credly.com/badges/f5c111b0-dde6-4a3e-b6cc-bc6b725664b2",
-    urlImagen: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Badge_JSE1-tcP0naN4TjsEEPyGA9iB6x1B83VUsR.png"
-  },
-  {
-    titulo: "JavaScript Essentials 2",
-    descripcion: "Cisco, in collaboration with OpenEDG JS Institute, verifies the earner of this badge successfully completed the JavaScript Essentials 2 course and achieved the student level credentials. Earner should know coding techniques while introducing both class-based and classless approaches in object-oriented programming, be familiar with a curated range of built-in objects that extend programming capabilities, manage complex data structures, such as Map and Set, and asynchronous programming.",
-    linkInsignia: "https://www.credly.com/badges/6c5928d5-dff3-45ed-93f6-7ea5124f77e1",
-    urlImagen: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Badge_JSE2-QVtPB3GyAzC3Zbll4Mfqzh732iOZhs.png"
-  },
-  {
-    titulo: "Operating Systems Basics",
-    descripcion: "Cisco verifies the earner of this badge successfully completed the Operating Systems Basics course and achieved this student level credential. Earner has fundamental knowledge of operating systems by covering the basic concepts and skills needed to explain the purpose and characteristics of operating systems, implement basic operating system security, and explain how to configure mobile device network connectivity and email.",
-    linkInsignia: "https://www.credly.com/badges/b45ede93-b62c-4cae-be95-60c2744daf02",
-    urlImagen: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Badge_OSB-ZJcUUPtymBSoaLlJbxzdVP1L5XK1K3.png"
-  },
-  {
-    titulo: "English for IT 2",
-    descripcion: "English at CEFR B2 level, Polite Requests, Advanced Modal Verbs, Customer Support Vocabulary, Networking Vocabulary, \"They\" as singular, Cleft Sentences, Cloud Computing Vocabulary, Software Vocabulary, Subjunctive Mood, Logical deductions, Updating Colleagues Vocabulary, Sharing Feedback Vocabulary, Conjunctions, Advanced Tenses",
-    linkInsignia: "https://www.credly.com/badges/b45ede93-b62c-4cae-be95-60c2744daf02",
-    urlImagen: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Badge_EIT2-jOaM6ioyeP1nQkyxaAcTXGjfGik9ea.png"
-  }
-];
+import { useTranslations } from 'next-intl';
 
 const CertificationCarousel: React.FC = () => {
+  const t = useTranslations('certifications');
+  const certifications = [
+    {
+      titulo: t('jse1Title'),
+      descripcion: t('jse1Desc'),
+      linkInsignia: "https://www.credly.com/badges/f5c111b0-dde6-4a3e-b6cc-bc6b725664b2",
+      urlImagen: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Badge_JSE1-tcP0naN4TjsEEPyGA9iB6x1B83VUsR.png"
+    },
+    {
+      titulo: t('jse2Title'),
+      descripcion: t('jse2Desc'),
+      linkInsignia: "https://www.credly.com/badges/6c5928d5-dff3-45ed-93f6-7ea5124f77e1",
+      urlImagen: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Badge_JSE2-QVtPB3GyAzC3Zbll4Mfqzh732iOZhs.png"
+    },
+    {
+      titulo: t('osbTitle'),
+      descripcion: t('osbDesc'),
+      linkInsignia: "https://www.credly.com/badges/b45ede93-b62c-4cae-be95-60c2744daf02",
+      urlImagen: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Badge_OSB-ZJcUUPtymBSoaLlJbxzdVP1L5XK1K3.png"
+    },
+    {
+      titulo: t('eit2Title'),
+      descripcion: t('eit2Desc'),
+      linkInsignia: "https://www.credly.com/badges/b45ede93-b62c-4cae-be95-60c2744daf02",
+      urlImagen: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Badge_EIT2-jOaM6ioyeP1nQkyxaAcTXGjfGik9ea.png"
+    }
+  ];
+
   return (
     <section className="w-full bg-background/80 dark:bg-background py-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-8 lg:px-16">
         <h2 className="text-3xl font-bold mb-8">
-          <span className="text-muted-foreground">03.</span> Certifications
+          <span className="text-muted-foreground">03.</span> {t('heading')}
         </h2>
         <div className="md:overflow-hidden">
           <div className="flex flex-col md:flex-row md:animate-carousel">

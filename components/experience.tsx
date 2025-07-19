@@ -2,8 +2,10 @@
 import { useEffect } from 'react'
 import { Card, CardContent } from "@/components/ui/card"
 import { setupIntersectionObserver } from '@/lib/animations'
+import { useTranslations } from 'next-intl';
 
 export default function Experience() {
+  const t = useTranslations('experience');
   useEffect(() => {
     setupIntersectionObserver();
   }, []);
@@ -12,20 +14,18 @@ export default function Experience() {
     {
       company: "Freelance",
       date: "JUN 2023 - PRESENT",
-      role: "Wordpress & React Developer",
-      description: [
-        "As a freelance developer, I have a proven track record of creating custom websites tailored to my clients' specific needs. I have extensive experience with technologies such as React, WordPress, and Next.js, along with PostgreSQL, enabling me to deliver scalable and user-friendly solutions."
-      ]
+      role: t('freelanceRole'),
+      description: [t('freelanceDesc')]
     },    
     {
       company: "Electro Alvear",
       date: "JAN 2022",
-      role: "Retail salesperson"
+      role: t('retailRole')
     },
     {
       company: "Sacabollos Quintana",
       date: "FEB 2021",
-      role: "Car Detailer"
+      role: t('carDetailerRole')
     }    
   ]
 
@@ -33,7 +33,7 @@ export default function Experience() {
     <section id="experience" className="py-20 px-4 sm:px-8 lg:px-16 bg-background dark:bg-background/95">
       <div className="max-w-6xl mx-auto">
         <h2 data-aos="fade-up" className="text-3xl font-bold mb-12">
-          <span className="text-muted-foreground">04.</span> Where I've Worked
+          <span className="text-muted-foreground">04.</span> {t('heading')}
         </h2>
         <div className="relative">
           {/* Timeline line */}

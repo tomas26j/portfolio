@@ -1,0 +1,118 @@
+{
+  "greeting": "Hello!",
+  "projects": "Projects",
+  "aboutMe": {
+    "section": "About Me",
+    "heading": "About Me",
+    "intro": "Hello! I'm Tomás, a passionate fullstack developer with a keen interest in building digital experiences that make a difference. My journey in tech started back in 2020, and since then, I've had the privilege of learning a diverse range of technologies and projects.",
+    "focus": "My focus is on creating efficient, scalable, and user-friendly solutions. I love diving into complex problems and emerging with elegant solutions. Whether it's crafting responsive front-end interfaces or architecting robust back-end systems, I'm always excited to take on new challenges.",
+    "skillsTitle": "Skills & Technologies"
+  },
+  "contact": "Contact",
+  "education": "Education",
+  "experience": {
+    "section": "Experience",
+    "heading": "Where I've Worked",
+    "freelanceRole": "Wordpress & React Developer",
+    "freelanceDesc": "As a freelance developer, I have a proven track record of creating custom websites tailored to my clients' specific needs. I have extensive experience with technologies such as React, WordPress, and Next.js, along with PostgreSQL, enabling me to deliver scalable and user-friendly solutions.",
+    "retailRole": "Retail salesperson",
+    "carDetailerRole": "Car Detailer"
+  },
+  "hero": {
+    "title": "Tomás Riera.",
+    "subtitle": "Fullstack Developer, based in Buenos Aires.",
+    "downloadCV": "Download CV"
+  },
+  "navbar": {
+    "aboutMe": "About Me",
+    "education": "Education",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "learningPath": {
+    "section": "Education",
+    "heading": "My Learning Path",
+    "bachelor": "Bachelor's degree in Data Science",
+    "bachelorDesc1": "Currently pursuing a Bachelor's degree in Data Science at UNSAM.",
+    "bachelorDesc2": "My goal is to acquire data analysis skills to solve real-world problems and contribute to the development of innovative solutions.",
+    "fullstack": "Fullstack Development",
+    "fullstackDesc1": "Immersed myself in a rigorous Fullstack web development program focused on the PERN stack.",
+    "fullstackDesc2": "Gained solid skills in creating interactive interfaces using React and Redux.",
+    "fullstackDesc3": "Learned to manage databases with PostgreSQL and Sequelize.",
+    "fullstackDesc4": "Became familiar with agile methodologies like SCRUM and AGILE.",
+    "backend": "Backend Development Career",
+    "backendDesc1": "Acquired a deep understanding of the logic behind web applications and how to optimize their performance.",
+    "backendDesc2": "Became familiar with ECMAScript 6, MySQL, and MongoDB.",
+    "backendDesc3": "Learned to create and manage REST APIs and perform CRUD operations.",
+    "initialWeb": "Initial Web Development",
+    "initialWebDesc1": "Learned to build robust structures using HTML5 and bring interfaces to life with CSS, including Responsive Design techniques.",
+    "initialWebDesc2": "Gained a solid understanding of JavaScript, enabling me to add interactivity and dynamism to web pages.",
+    "initialWebDesc3": "This training provided me with a fundamental foundation in Front-End development."
+  },
+  "projectsSection": {
+    "heading": "Some Things I've Built",
+    "wordpress": "WordPress Sites",
+    "react": "React Framework Sites",
+    "educational": "Educational Projects / Mini-Projects",
+    "featured": "Featured Project",
+    "inspiration": "Inspiration",
+    "tech": "Technologies",
+    "demo": "Demo",
+    "sandboxBadge": "Explore the interactive Sandbox of my projects!",
+    "sandboxDesc": "— See demos, details and documentation"
+  },
+  "projectsContent": {
+    "cancunTitle": "Cancun.com.ar",
+    "cancunDesc": "Travel website created with WordPress and JavaScript. Inspired by CosmoWP's travel template, it offers an intuitive user experience for exploring destinations in Cancun and booking trips.",
+    "burbankTitle": "Burbank Detox Center",
+    "burbankDesc": "Professional business website built with WordPress, featuring custom themes, responsive design, and integrated contact forms. Optimized for SEO and performance.",
+    "sacabollosTitle": "Sacabollos Quintana",
+    "sacabollosDesc": "Custom landing page from scratch for a renowned auto detailing shop in Buenos Aires. The site reflects the business's professional identity and showcases its core services through a conversion-optimized design, intuitive navigation, and excellent performance across all devices.",
+    "uchronoTitle": "Uchrono",
+    "uchronoDesc": "Uchrono is a React-based financial education platform that enables users to perform historical investment analysis through interactive 'what if' calculations. The system allows users to explore how past investments in various assets would have performed and teaches investment principles.",
+    "trackerhubTitle": "Tracker Hub",
+    "trackerhubDesc": "Web application that consumes the REST Countries API to obtain country information and stores it in a PostgreSQL database. Allows users to create and manage a record of their trips, including destinations, activities, and other details."
+  },
+  "miniProjects": {
+    "meliTitle": "Mercado Libre's UI clone",
+    "meliDesc": "Clones Mercado Libre's frontend using modern technologies. Replicates the user interface of Mercado Libre's products pages.",
+    "sushiTitle": "Sushi-Bot",
+    "sushiDesc": "Simple chatbot that simulates a sushi business without the use of AI or LLMs to respond.",
+    "todoTitle": "Task Manager / ToDo App",
+    "todoDesc": "Basic to-do list app that demonstrates fundamental knowledge of TypeScript and React.",
+    "videoSpeedTitle": "Universal Video Speed",
+    "videoSpeedDesc": "Extension for Chromium browsers that allows universal management of any HTML5 video speed.",
+    "linkBioTitle": "'Link in Bio' like-tool",
+    "linkBioDesc": "Simple 'Link in Bio' style web application to put your front-end development skills into practice.",
+    "pomodoroTitle": "Pomodoro Timer",
+    "pomodoroDesc": "Productivity timer with customizable intervals and statistics insights."
+  },
+  "certifications": {
+    "heading": "Certifications",
+    "jse1Title": "JavaScript Essentials 1",
+    "jse1Desc": "Cisco, in collaboration with OpenEDG JS Institute, verifies the earner of this badge successfully completed the JavaScript Essentials 1 course and achieved the student level credentials. Earners know the syntax of the core JavaScript; can work with variables, operators, flow control, and functions; know the basics of data types system; think algorithmically and can analyze problems using a programmatic conceptual apparatus; and can design, develop, and improve simple JavaScript programs.",
+    "jse2Title": "JavaScript Essentials 2",
+    "jse2Desc": "Cisco, in collaboration with OpenEDG JS Institute, verifies the earner of this badge successfully completed the JavaScript Essentials 2 course and achieved the student level credentials. Earner should know coding techniques while introducing both class-based and classless approaches in object-oriented programming, be familiar with a curated range of built-in objects that extend programming capabilities, manage complex data structures, such as Map and Set, and asynchronous programming.",
+    "osbTitle": "Operating Systems Basics",
+    "osbDesc": "Cisco verifies the earner of this badge successfully completed the Operating Systems Basics course and achieved this student level credential. Earner has fundamental knowledge of operating systems by covering the basic concepts and skills needed to explain the purpose and characteristics of operating systems, implement basic operating system security, and explain how to configure mobile device network connectivity and email.",
+    "eit2Title": "English for IT 2",
+    "eit2Desc": "English at CEFR B2 level, Polite Requests, Advanced Modal Verbs, Customer Support Vocabulary, Networking Vocabulary, 'They' as singular, Cleft Sentences, Cloud Computing Vocabulary, Software Vocabulary, Subjunctive Mood, Logical deductions, Updating Colleagues Vocabulary, Sharing Feedback Vocabulary, Conjunctions, Advanced Tenses."
+  },
+  "contactSection": {
+    "heading": "Contact Me",
+    "subtitle": "Get in touch with me for any questions or opportunities.",
+    "formTitle": "Send me a message",
+    "formDesc": "Fill out the form below and I'll get back to you as soon as possible.",
+    "name": "Name",
+    "namePlaceholder": "Your name",
+    "email": "Email",
+    "emailPlaceholder": "Your email",
+    "message": "Message",
+    "messagePlaceholder": "Your message",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "success": "Your message has been sent successfully!",
+    "error": "There was an error sending your message. Please try again."
+  }
+} 

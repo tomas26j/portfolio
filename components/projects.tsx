@@ -5,6 +5,7 @@ import { Github, ExternalLink, ChevronLeft, ChevronRight, X } from "lucide-react
 import Image from "next/image"
 import Link from "next/link"
 import { setupIntersectionObserver } from "@/lib/animations"
+import { useTranslations } from 'next-intl';
 
 // Componente de carrusel de imágenes
 const ImageCarousel = ({ images, title }: { images: string[]; title: string }) => {
@@ -107,11 +108,13 @@ const ImageCarousel = ({ images, title }: { images: string[]; title: string }) =
 }
 
 export default function Projects() {
+  const t = useTranslations('projectsSection');
+  const tContent = useTranslations('projectsContent');
+  const tMini = useTranslations('miniProjects');
   const wordpressProjects = [
     {
-      title: "Cancun.com.ar",
-      description:
-        "Travel website created with WordPress and JavaScript. Inspired by CosmoWP's travel template, it offers an intuitive user experience for exploring destinations in Cancun and booking trips.",
+      title: tContent('cancunTitle'),
+      description: tContent('cancunDesc'),
       images: [
         "/cancun.com.ar/cancun-com-ar_00.png",
         "/cancun.com.ar/cancun-com-ar_0.png",
@@ -127,9 +130,8 @@ export default function Projects() {
       },
     },
     {
-      title: "Burbank Detox Center",
-      description:
-        "Professional business website built with WordPress, featuring custom themes, responsive design, and integrated contact forms. Optimized for SEO and performance.",
+      title: tContent('burbankTitle'),
+      description: tContent('burbankDesc'),
       images: [
         "/burbankdetoxcenter/Burbank-Detox-Center_1.png",
         "/burbankdetoxcenter/Burbank-Detox-Center_2.png",
@@ -146,9 +148,8 @@ export default function Projects() {
 
   const reactProjects = [
     {
-      title: "Sacabollos Quintana",
-      description:
-        "Custom landing page from scratch for a renowned auto detailing shop in Buenos Aires. The site reflects the business's professional identity and showcases its core services such as deep cleaning and cosmetic restoration through a conversion-optimized design, intuitive navigation, and excellent performance across all devices.custom landing page from scratch for a renowned auto detailing shop in Buenos Aires. The site reflects the business's professional identity and showcases its core services such as deep cleaning and cosmetic restoration through a conversion-optimized design, intuitive navigation, and excellent performance across all devices.",
+      title: tContent('sacabollosTitle'),
+      description: tContent('sacabollosDesc'),
       images: [
         "/sacabolloquintana/sacabollos-quintana_0.png",
         "/sacabolloquintana/sacabollos-quintana_1.png",
@@ -161,9 +162,8 @@ export default function Projects() {
       },
     },
     {
-      title: "Uchrono",
-      description:
-        "Uchrono is a React-based financial education platform that enables users to perform historical investment analysis through interactive 'what if' calculations. The system allows users to explore how past investments in various assets (cryptocurrencies, stocks, commodities, and indices) would have performed over specific time periods, combined with educational content to teach investment principles .",
+      title: tContent('uchronoTitle'),
+      description: tContent('uchronoDesc'),
       images: [
         "/uchrono/uchrono_0.png",
         "/uchrono/uchrono_1.png",
@@ -179,9 +179,8 @@ export default function Projects() {
       },
     },
     {
-      title: "Tracker Hub",
-      description:
-        "Tracker Hub is Web application that consumes the REST Countries API to obtain country information and stores it in a PostgreSQL database. Allows users to create and manage a record of their trips, including destinations, activities, and other details.",
+      title: tContent('trackerhubTitle'),
+      description: tContent('trackerhubDesc'),
       images: [
         "/trackerhub/TrackerHub_0.png",
         "/trackerhub/TrackerHub_1.png",
@@ -200,43 +199,43 @@ export default function Projects() {
 
   const educationalProjects = [
     {
-      title: "Mercado Libre's UI clone",
-      description: "Clones Mercado Libre's frontend using modern technologies. Replicates the user interface of Mercado Libre's products pages.",
+      title: tMini('meliTitle'),
+      description: tMini('meliDesc'),
       image: "/miniprojects/Mercado-Libre-Clone_0.png",
       tech: ["React", "TailwindCSS"],
       links: { github: "https://github.com/tomas26j/MELI-UI-CLON", demo: "https://tomas26j-meli-clone.netlify.app/" },
     },
     {
-      title: "Sushi-Bot",
-      description: "Simple chatbot that simulates a sushi business without the use of AI or LLMs to respond",
+      title: tMini('sushiTitle'),
+      description: tMini('sushiDesc'),
       image: "/miniprojects/Sushi-bot_0.png",
       tech: ["JavaScript", "API"],
       links: { github: "https://github.com/tomas26j/Chatbot-code-challenge", demo: "#" },
     },
     {
-      title: "Task Manager / ToDo App",
-      description: "Basic to-do list app that demonstrates fundamental knowledge of TypeScript and React",
+      title: tMini('todoTitle'),
+      description: tMini('todoDesc'),
       image: "/miniprojects/Gestor-De-Tareas_0.png",
       tech: ["TypeScript", "React", "TailwindCSS"],
       links: { github: "https://github.com/tomas26j/ChallengeForIT", demo: "#" },
     },
     {
-      title: "Universal Video Speed",
-      description: "Extension for Chromium browsers that allows universal management of any HTML5 video speed",
+      title: tMini('videoSpeedTitle'),
+      description: tMini('videoSpeedDesc'),
       image: "/miniprojects/Universal-video-speed.png",
       tech: ["React", "CSS3"],
       links: { github: "https://github.com/tomas26j/UniversalVideoSpeed", demo: "#" },
     },
     {
-      title: "'Link in Bio' like-tool",
-      description: "Simple 'Link in Bio' style web application to put your front-end development skills into practice.",
+      title: tMini('linkBioTitle'),
+      description: tMini('linkBioDesc'),
       image: "/miniprojects/Link-In-Bio_0.png",
       tech: ["JavaScript", "CSS"],
       links: { github: "#", demo: "#" },
     },
     {
-      title: "Pomodoro Timer",
-      description: "Productivity timer with customizable intervals and stadistics insights",
+      title: tMini('pomodoroTitle'),
+      description: tMini('pomodoroDesc'),
       image: "/miniprojects/Pomodoro-Timer_0.png",
       tech: ["React", "Context API"],
       links: { github: "https://github.com/tomas26j/vibrant-pomodoro-timer", demo: "https://vibrant-pomodoro-timer.vercel.app/" },
@@ -251,13 +250,13 @@ export default function Projects() {
     <section id="projects" className="py-20 px-4 sm:px-8 lg:px-16 bg-background/95 dark:bg-background">
       <div className="max-w-6xl mx-auto">
         <h2 data-aos="fade-up" className="text-3xl font-bold mb-12">
-          <span className="text-muted-foreground">03.</span> Some Things I've Built
+          <span className="text-muted-foreground">03.</span> {t('heading')}
         </h2>
 
         {/* WordPress Sites Section */}
         <div className="mb-16">
           <h3 data-aos="fade-up" className="text-2xl font-semibold mb-8 text-primary">
-            WordPress Sites
+            {t('wordpress')}
           </h3>
           <div className="grid gap-8">
             {wordpressProjects.map((project, index) => (
@@ -297,7 +296,7 @@ export default function Projects() {
         {/* React Framework Sites Section */}
         <div className="mb-16">
           <h3 data-aos="fade-up" className="text-2xl font-semibold mb-8 text-primary">
-            React Framework Sites
+            {t('react')}
           </h3>
           <div className="grid gap-8">
             {reactProjects.map((project, index) => (
@@ -352,12 +351,12 @@ export default function Projects() {
               style={{ zIndex: 10 }}
             >
               <span role="img" aria-label="sandbox">🧪</span>
-              Explore the interactive Sandbox of my projects!
-              <span className="hidden sm:inline">— See demos, details and documentation</span>
+              {t('sandboxBadge')}
+              <span className="hidden sm:inline">{t('sandboxDesc')}</span>
             </a>
           </div>
           <h3 data-aos="fade-up" className="text-2xl font-semibold mb-8 text-primary">
-            Educational Projects / Mini-Projects
+            {t('educational')}
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {educationalProjects.map((project, index) => (

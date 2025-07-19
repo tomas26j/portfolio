@@ -2,51 +2,53 @@
 import { useEffect } from 'react'
 import { Card, CardContent } from "@/components/ui/card"
 import { setupIntersectionObserver } from '@/lib/animations'
+import { useTranslations } from 'next-intl';
 
 export default function LearningPath() {
+  const t = useTranslations('learningPath');
   useEffect(() => {
     setupIntersectionObserver();
   }, []);
 
   const learningTimeline = [
     {
-      program: "Bachelor's degree in Data Science",
+      program: t('bachelor'),
       institution: "UNSAM",
       date: "MARCH 2024 - PRESENT",
       description: [
-        "Currently pursuing a Bachelor's degree in Data Science at UNSAM.",
-        "My goal is to acquire data analysis skills to solve real-world problems and contribute to the development of innovative solutions."
+        t('bachelorDesc1'),
+        t('bachelorDesc2')
       ]
     },
     {
-      program: "Fullstack Development",
+      program: t('fullstack'),
       institution: "Soy Henry",
       date: "MARCH 2023 - SEPTEMBER 2023",
       description: [
-        "Immersed myself in a rigorous Fullstack web development program focused on the PERN stack.",
-        "Gained solid skills in creating interactive interfaces using React and Redux.",
-        "Learned to manage databases with PostgreSQL and Sequelize.",
-        "Became familiar with agile methodologies like SCRUM and AGILE."
+        t('fullstackDesc1'),
+        t('fullstackDesc2'),
+        t('fullstackDesc3'),
+        t('fullstackDesc4')
       ]
     },
     {
-      program: "Backend Development Career",
+      program: t('backend'),
       institution: "CoderHouse",
       date: "MARCH 2022 - APRIL 2023",
       description: [
-        "Acquired a deep understanding of the logic behind web applications and how to optimize their performance.",
-        "Became familiar with ECMAScript 6, MySQL, and MongoDB.",
-        "Learned to create and manage REST APIs and perform CRUD operations."
+        t('backendDesc1'),
+        t('backendDesc2'),
+        t('backendDesc3')
       ]
     },
     {
-      program: "Initial Web Development",
+      program: t('initialWeb'),
       institution: "UTN Buenos Aires",
       date: "OCTOBER 2022 - DECEMBER 2022",
       description: [
-        "Learned to build robust structures using HTML5 and bring interfaces to life with CSS, including Responsive Design techniques.",
-        "Gained a solid understanding of JavaScript, enabling me to add interactivity and dynamism to web pages.",
-        "This training provided me with a fundamental foundation in Front-End development."
+        t('initialWebDesc1'),
+        t('initialWebDesc2'),
+        t('initialWebDesc3')
       ]
     }
   ]
@@ -55,7 +57,7 @@ export default function LearningPath() {
     <section id="learning-path" className="py-20 px-4 sm:px-8 lg:px-16 bg-background dark:bg-background/95">
       <div className="max-w-6xl mx-auto">
         <h2 data-aos="fade-up" className="text-3xl font-bold mb-12">
-          <span className="text-muted-foreground">02.</span> My Learning Path
+          <span className="text-muted-foreground">02.</span> {t('heading')}
         </h2>
         <div className="relative">
           {/* Timeline line */}

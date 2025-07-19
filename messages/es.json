@@ -1,0 +1,118 @@
+{
+  "greeting": "¡Hola!",
+  "projects": "Proyectos",
+  "aboutMe": {
+    "section": "Sobre mí",
+    "heading": "Sobre mí",
+    "intro": "¡Hola! Soy Tomás, un desarrollador fullstack apasionado con gran interés en construir experiencias digitales que marquen la diferencia. Mi camino en la tecnología comenzó en 2020 y desde entonces he tenido el privilegio de aprender una amplia gama de tecnologías y proyectos.",
+    "focus": "Mi enfoque está en crear soluciones eficientes, escalables y fáciles de usar. Me encanta enfrentarme a problemas complejos y encontrar soluciones elegantes. Ya sea creando interfaces front-end responsivas o diseñando sistemas back-end robustos, siempre estoy emocionado de asumir nuevos desafíos.",
+    "skillsTitle": "Habilidades y Tecnologías"
+  },
+  "contact": "Contacto",
+  "education": "Educación",
+  "experience": {
+    "section": "Experiencia",
+    "heading": "Dónde he trabajado",
+    "freelanceRole": "Desarrollador Wordpress & React",
+    "freelanceDesc": "Como desarrollador freelance, tengo experiencia comprobada creando sitios web a medida según las necesidades específicas de mis clientes. Poseo amplia experiencia con tecnologías como React, WordPress y Next.js, junto con PostgreSQL, lo que me permite entregar soluciones escalables y fáciles de usar.",
+    "retailRole": "Vendedor minorista",
+    "carDetailerRole": "Detailer de autos"
+  },
+  "hero": {
+    "title": "Tomás Riera.",
+    "subtitle": "Desarrollador Fullstack, basado en Buenos Aires.",
+    "downloadCV": "Descargar CV"
+  },
+  "navbar": {
+    "aboutMe": "Sobre mí",
+    "education": "Educación",
+    "projects": "Proyectos",
+    "experience": "Experiencia",
+    "contact": "Contacto"
+  },
+  "learningPath": {
+    "section": "Educación",
+    "heading": "Mi Trayectoria Académica",
+    "bachelor": "Licenciatura en Ciencia de Datos",
+    "bachelorDesc1": "Actualmente cursando la Licenciatura en Ciencia de Datos en UNSAM.",
+    "bachelorDesc2": "Mi objetivo es adquirir habilidades de análisis de datos para resolver problemas reales y contribuir al desarrollo de soluciones innovadoras.",
+    "fullstack": "Desarrollo Fullstack",
+    "fullstackDesc1": "Me sumergí en un riguroso programa de desarrollo web Fullstack enfocado en el stack PERN.",
+    "fullstackDesc2": "Adquirí sólidas habilidades en la creación de interfaces interactivas usando React y Redux.",
+    "fullstackDesc3": "Aprendí a gestionar bases de datos con PostgreSQL y Sequelize.",
+    "fullstackDesc4": "Me familiaricé con metodologías ágiles como SCRUM y AGILE.",
+    "backend": "Carrera de Backend",
+    "backendDesc1": "Adquirí un profundo entendimiento de la lógica detrás de las aplicaciones web y cómo optimizar su rendimiento.",
+    "backendDesc2": "Me familiaricé con ECMAScript 6, MySQL y MongoDB.",
+    "backendDesc3": "Aprendí a crear y gestionar APIs REST y realizar operaciones CRUD.",
+    "initialWeb": "Desarrollo Web Inicial",
+    "initialWebDesc1": "Aprendí a construir estructuras robustas usando HTML5 y dar vida a las interfaces con CSS, incluyendo técnicas de Diseño Responsivo.",
+    "initialWebDesc2": "Obtuve una sólida comprensión de JavaScript, lo que me permitió agregar interactividad y dinamismo a las páginas web.",
+    "initialWebDesc3": "Esta formación me brindó una base fundamental en el desarrollo Front-End."
+  },
+  "projectsSection": {
+    "heading": "Algunas cosas que he construido",
+    "wordpress": "Sitios WordPress",
+    "react": "Sitios con Frameworks React",
+    "educational": "Proyectos Educativos / Mini-Proyectos",
+    "featured": "Proyecto Destacado",
+    "inspiration": "Inspiración",
+    "tech": "Tecnologías",
+    "demo": "Demo",
+    "sandboxBadge": "Explora el Sandbox interactivo de mis proyectos!",
+    "sandboxDesc": "— Mira demos, detalles y documentación"
+  },
+  "projectsContent": {
+    "cancunTitle": "Cancun.com.ar",
+    "cancunDesc": "Sitio de viajes creado con WordPress y JavaScript. Inspirado en la plantilla de viajes de CosmoWP, ofrece una experiencia intuitiva para explorar destinos en Cancún y reservar viajes.",
+    "burbankTitle": "Burbank Detox Center",
+    "burbankDesc": "Sitio web profesional para negocios construido con WordPress, con temas personalizados, diseño responsivo y formularios de contacto integrados. Optimizado para SEO y rendimiento.",
+    "sacabollosTitle": "Sacabollos Quintana",
+    "sacabollosDesc": "Landing page personalizada para un reconocido taller de detailing en Buenos Aires. El sitio refleja la identidad profesional del negocio y muestra sus servicios principales a través de un diseño optimizado para conversiones, navegación intuitiva y excelente rendimiento en todos los dispositivos.",
+    "uchronoTitle": "Uchrono",
+    "uchronoDesc": "Plataforma educativa financiera basada en React que permite realizar análisis históricos de inversiones mediante cálculos interactivos de 'qué hubiera pasado si'. Permite explorar cómo habrían rendido inversiones pasadas en distintos activos y enseña principios de inversión.",
+    "trackerhubTitle": "Tracker Hub",
+    "trackerhubDesc": "Aplicación web que consume la API REST Countries para obtener información de países y la almacena en una base de datos PostgreSQL. Permite a los usuarios crear y gestionar un registro de sus viajes, incluyendo destinos, actividades y otros detalles."
+  },
+  "miniProjects": {
+    "meliTitle": "Clon de la UI de Mercado Libre",
+    "meliDesc": "Replica la interfaz de usuario de las páginas de productos de Mercado Libre usando tecnologías modernas.",
+    "sushiTitle": "Sushi-Bot",
+    "sushiDesc": "Chatbot simple que simula un negocio de sushi sin usar IA ni LLMs para responder.",
+    "todoTitle": "Gestor de Tareas / ToDo App",
+    "todoDesc": "Aplicación básica de lista de tareas que demuestra conocimientos fundamentales de TypeScript y React.",
+    "videoSpeedTitle": "Universal Video Speed",
+    "videoSpeedDesc": "Extensión para navegadores Chromium que permite gestionar la velocidad de cualquier video HTML5.",
+    "linkBioTitle": "Herramienta tipo 'Link in Bio'",
+    "linkBioDesc": "Aplicación web simple estilo 'Link in Bio' para practicar habilidades de desarrollo front-end.",
+    "pomodoroTitle": "Temporizador Pomodoro",
+    "pomodoroDesc": "Temporizador de productividad con intervalos personalizables y estadísticas de uso."
+  },
+  "certifications": {
+    "heading": "Certificaciones",
+    "jse1Title": "JavaScript Essentials 1",
+    "jse1Desc": "Cisco, en colaboración con OpenEDG JS Institute, certifica que el portador de esta insignia completó exitosamente el curso JavaScript Essentials 1 y alcanzó el nivel de estudiante. Conoce la sintaxis básica de JavaScript, puede trabajar con variables, operadores, control de flujo y funciones; conoce los fundamentos de los tipos de datos; piensa algorítmicamente y puede analizar problemas de forma programática; y puede diseñar, desarrollar y mejorar programas JavaScript simples.",
+    "jse2Title": "JavaScript Essentials 2",
+    "jse2Desc": "Cisco, en colaboración con OpenEDG JS Institute, certifica que el portador de esta insignia completó exitosamente el curso JavaScript Essentials 2 y alcanzó el nivel de estudiante. Debe conocer técnicas de codificación, enfoques orientados a objetos, estar familiarizado con objetos integrados, gestionar estructuras de datos complejas como Map y Set, y programación asíncrona.",
+    "osbTitle": "Fundamentos de Sistemas Operativos",
+    "osbDesc": "Cisco certifica que el portador de esta insignia completó exitosamente el curso Fundamentos de Sistemas Operativos y alcanzó el nivel de estudiante. Posee conocimientos fundamentales sobre sistemas operativos, conceptos básicos, seguridad y configuración de conectividad y correo en dispositivos móviles.",
+    "eit2Title": "Inglés para IT 2",
+    "eit2Desc": "Inglés nivel B2 CEFR, Peticiones Corteses, Verbos Modales Avanzados, Vocabulario de Soporte al Cliente, Vocabulario de Redes, 'They' como singular, Oraciones Hendidas, Vocabulario de Cloud Computing, Vocabulario de Software, Modo Subjuntivo, Deducciones Lógicas, Vocabulario para Actualizar Colegas, Compartir Feedback, Conjunciones, Tiempos Verbales Avanzados."
+  },
+  "contactSection": {
+    "heading": "Contáctame",
+    "subtitle": "Ponte en contacto conmigo para cualquier consulta u oportunidad.",
+    "formTitle": "Envíame un mensaje",
+    "formDesc": "Completa el formulario y te responderé lo antes posible.",
+    "name": "Nombre",
+    "namePlaceholder": "Tu nombre",
+    "email": "Correo electrónico",
+    "emailPlaceholder": "Tu correo electrónico",
+    "message": "Mensaje",
+    "messagePlaceholder": "Tu mensaje",
+    "send": "Enviar mensaje",
+    "sending": "Enviando...",
+    "success": "¡Tu mensaje ha sido enviado exitosamente!",
+    "error": "Hubo un error al enviar tu mensaje. Por favor, inténtalo de nuevo."
+  }
+} 

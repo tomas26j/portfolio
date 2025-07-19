@@ -7,8 +7,10 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { setupIntersectionObserver } from '@/lib/animations'
+import { useTranslations } from 'next-intl';
 
 export default function Contact() {
+  const t = useTranslations('contactSection');
   const form = useRef<HTMLFormElement>(null);
   const [sent, setSent] = useState(false);
   const [error, setError] = useState(false);
@@ -76,23 +78,23 @@ export default function Contact() {
   return (
     <section id="contact" className="py-20 px-4 sm:px-8 lg:px-16 bg-background/95 dark:bg-background">
       <div data-aos="fade-up" className="max-w-2xl mx-auto text-center">
-        <h2 className="text-3xl font-bold mb-4">Contact Me</h2>
+        <h2 className="text-3xl font-bold mb-4">{t('heading')}</h2>
         <p className="text-muted-foreground mb-8">
-          Get in touch with me for any questions or opportunities.
+          {t('subtitle')}
         </p>
         
         <Card className="dark:bg-card/20">
           <CardHeader>
-            <CardTitle>Send me a message</CardTitle>
+            <CardTitle>{t('formTitle')}</CardTitle>
             <CardDescription>
-              Fill out the form below and I'll get back to you as soon as possible.
+              {t('formDesc')}
             </CardDescription>
           </CardHeader>
           <CardContent>
             <form ref={form} onSubmit={sendEmail} className="space-y-4">
               {/* Honeypot field (hidden from users) */}
               <input
-                type="text"c
+                type="text"
                 name="_honeypot"
                 style={{ display: 'none' }}
                 tabIndex={-1}
@@ -101,20 +103,20 @@ export default function Contact() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <label htmlFor="name" className="text-sm font-medium">
-                    Name
+                    {t('name')}
                   </label>
                   <Input 
                     id="name" 
                     name="user_name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    placeholder="Your name" 
+                    placeholder={t('namePlaceholder')} 
                     required
                   />
                 </div>
                 <div className="space-y-2">
                   <label htmlFor="email" className="text-sm font-medium">
-                    Email
+                    {t('email')}
                   </label>
                   <Input 
                     id="email" 
@@ -122,36 +124,36 @@ export default function Contact() {
                     name="user_email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    placeholder="Your email" 
+                    placeholder={t('emailPlaceholder')} 
                     required
                   />
                 </div>
               </div>
               <div className="space-y-2">
                 <label htmlFor="message" className="text-sm font-medium">
-                  Message
+                  {t('message')}
                 </label>
                 <Textarea
                   id="message"
                   name="message"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  placeholder="Your message"
+                  placeholder={t('messagePlaceholder')}
                   className="min-h-[150px]"
                   required
                 />
               </div>
               <Button type="submit" className="w-full" disabled={isSubmitting}>
-                {isSubmitting ? 'Sending...' : 'Send Message'}
+                {isSubmitting ? t('sending') : t('send')}
               </Button>
               {sent && (
                 <div className="mt-4 p-4 bg-green-100 text-green-700 rounded-md text-center">
-                  Your message has been sent successfully!
+                  {t('success')}
                 </div>
               )}
               {error && (
                 <div className="mt-4 p-4 bg-red-100 text-red-700 rounded-md text-center">
-                  There was an error sending your message. Please try again.
+                  {t('error')}
                 </div>
               )}
             </form>
