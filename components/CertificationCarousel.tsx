@@ -36,7 +36,7 @@ const CertificationCarousel: React.FC = () => {
   ];
 
   return (
-    <section className="w-full bg-background/80 dark:bg-background py-16">
+    <section className="w-full bg-background/60 dark:bg-background/60 py-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-8 lg:px-16">
         <h2 className="text-3xl font-bold mb-8">
           <span className="text-muted-foreground">03.</span> {t('heading')}
