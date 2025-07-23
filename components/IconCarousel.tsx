@@ -14,7 +14,7 @@ const icons = [
 
 const IconCarousel: React.FC = () => {
   return (
-    <div className="w-full overflow-hidden bg-background/80 dark:bg-background py-8">
+    <div className="w-full overflow-hidden bg-background/60 dark:bg-background/60 py-8">
       <div className="flex animate-carousel">
         {[...icons, ...icons].map((Icon, index) => (
           <div key={index} className="flex-none mx-4">

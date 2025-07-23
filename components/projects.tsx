@@ -1,12 +1,13 @@
 "use client"
 import { useEffect, useState } from "react"
 import { Card, CardContent, CardTitle, CardDescription } from "@/components/ui/card"
-import { Github, ExternalLink, ChevronLeft, ChevronRight, X } from "lucide-react"
+import { Github, ExternalLink, ChevronLeft, ChevronRight, X, Eye } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { setupIntersectionObserver } from "@/lib/animations"
 import { useTranslations } from 'next-intl';
 import { getStaticPath } from '@/lib/utils';
+import { FullScreenProjectModal } from "@/components/ui/FullScreenProjectModal"
 
 // Componente de carrusel de imágenes
 const ImageCarousel = ({ images, title }: { images: string[]; title: string }) => {
@@ -112,10 +113,17 @@ export default function Projects() {
   const t = useTranslations('projectsSection');
   const tContent = useTranslations('projectsContent');
   const tMini = useTranslations('miniProjects');
+  const tDetails = useTranslations('common'); // Asume que tienes una key para 'moreDetails' o 'masDetalles'
+
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedProject, setSelectedProject] = useState<any>(null);
+
   const wordpressProjects = [
     {
+      slug: "cancun-com-ar",
       title: tContent('cancunTitle'),
       description: tContent('cancunDesc'),
+      overview: tContent('cancunOverview'),
       images: [
         getStaticPath("/cancun.com.ar/cancun-com-ar_00.png"),
         getStaticPath("/cancun.com.ar/cancun-com-ar_0.png"),
@@ -124,22 +132,50 @@ export default function Projects() {
         getStaticPath("/cancun.com.ar/cancun-com-ar_3.png"),
       ],
       tech: ["WordPress", "JavaScript", "PHP", "Elementor"],
-      inspiration: "Inspired by CosmoWP's travel template",
+      techDetails: {
+        frontend: ["WordPress", "Elementor"],
+        backend: ["PHP"],
+        database: ["MySQL"],
+        deployment: ["Shared Hosting"],
+        tools: ["Google Analytics"]
+      },
+      features: [tContent('cancunFeature1'), tContent('cancunFeature2')],
+      challenges: [tContent('cancunChallenge1')],
+      solutions: [tContent('cancunSolution1')],
+      results: [tContent('cancunResult1')],
+      timeline: [
+        { phase: tContent('cancunPhase1'), duration: tContent('cancunDuration1'), description: tContent('cancunPhaseDesc1') },
+      ],
       links: {
         github: "github.com/tomas26j",
         demo: "https://www.cancun.com.ar",
       },
     },
     {
+      slug: "burbank-detox-center",
       title: tContent('burbankTitle'),
       description: tContent('burbankDesc'),
+      overview: tContent('burbankOverview'),
       images: [
         getStaticPath("/burbankdetoxcenter/Burbank-Detox-Center_1.png"),
         getStaticPath("/burbankdetoxcenter/Burbank-Detox-Center_2.png"),
         getStaticPath("/burbankdetoxcenter/Burbank-Detox-Center_3.png"),
       ],
       tech: ["WordPress", "PHP", "CSS3", "JavaScript"],
-      inspiration: "Custom business template design",
+      techDetails: {
+        frontend: ["WordPress", "Custom CSS"],
+        backend: ["PHP"],
+        database: ["MySQL"],
+        deployment: ["Shared Hosting"],
+        tools: ["Contact Form 7"]
+      },
+      features: [tContent('burbankFeature1'), tContent('burbankFeature2')],
+      challenges: [tContent('burbankChallenge1')],
+      solutions: [tContent('burbankSolution1')],
+      results: [tContent('burbankResult1')],
+      timeline: [
+        { phase: tContent('burbankPhase1'), duration: tContent('burbankDuration1'), description: tContent('burbankPhaseDesc1') },
+      ],
       links: {
         github: "github.com/tomas26j",
         demo: "https://www.burbankdetox.com/",
@@ -149,22 +185,40 @@ export default function Projects() {
 
   const reactProjects = [
     {
+      slug: "sacabollos-quintana",
       title: tContent('sacabollosTitle'),
       description: tContent('sacabollosDesc'),
+      overview: tContent('sacabollosOverview'),
       images: [
         getStaticPath("/sacabolloquintana/sacabollos-quintana_0.png"),
         getStaticPath("/sacabolloquintana/sacabollos-quintana_1.png"),
         getStaticPath("/sacabolloquintana/sacabollos-quintana_2.png"),
       ],
       tech: ["Vue", "React", "Styled Components", "CSS"],
+      techDetails: {
+        frontend: ["React", "Styled Components"],
+        backend: [],
+        database: [],
+        deployment: ["Netlify"],
+        tools: ["Figma"]
+      },
+      features: [tContent('sacabollosFeature1'), tContent('sacabollosFeature2')],
+      challenges: [tContent('sacabollosChallenge1')],
+      solutions: [tContent('sacabollosSolution1')],
+      results: [tContent('sacabollosResult1')],
+      timeline: [
+        { phase: tContent('sacabollosPhase1'), duration: tContent('sacabollosDuration1'), description: tContent('sacabollosPhaseDesc1') },
+      ],
       links: {
         github: "https://github.com/tomas26j/SacabolloQuintana",
         demo: "https://sacabollosquintana.netlify.app/",
       },
     },
     {
+      slug: "uchrono",
       title: tContent('uchronoTitle'),
       description: tContent('uchronoDesc'),
+      overview: tContent('uchronoOverview'),
       images: [
         getStaticPath("/uchrono/uchrono_0.png"),
         getStaticPath("/uchrono/uchrono_1.png"),
@@ -173,15 +227,30 @@ export default function Projects() {
         getStaticPath("/uchrono/uchrono_4.png"),
       ],
       tech: ["React", "Craco", "Radix UI", "Tailwind CSS", "Chart.js", "Node.js"],
-      features: ["Multi APIs Integration", "Investment Calculator", "Timeline Visualization", "Curated Scenarios"],
+      techDetails: {
+        frontend: ["React", "Radix UI", "Tailwind CSS", "Chart.js"],
+        backend: ["Node.js"],
+        database: ["PostgreSQL"],
+        deployment: ["Vercel"],
+        tools: ["Figma"]
+      },
+      features: [tContent('uchronoFeature1'), tContent('uchronoFeature2')],
+      challenges: [tContent('uchronoChallenge1')],
+      solutions: [tContent('uchronoSolution1')],
+      results: [tContent('uchronoResult1')],
+      timeline: [
+        { phase: tContent('uchronoPhase1'), duration: tContent('uchronoDuration1'), description: tContent('uchronoPhaseDesc1') },
+      ],
       links: {
         github: "https://github.com/tomas26j/Uchrono",
         demo: "https://uchronia.netlify.app/",
       },
     },
     {
+      slug: "trackerhub",
       title: tContent('trackerhubTitle'),
       description: tContent('trackerhubDesc'),
+      overview: tContent('trackerhubOverview'),
       images: [
         getStaticPath("/trackerhub/TrackerHub_0.png"),
         getStaticPath("/trackerhub/TrackerHub_1.png"),
@@ -189,11 +258,47 @@ export default function Projects() {
         getStaticPath("/trackerhub/TrackerHub_4.png"),
         getStaticPath("/trackerhub/TrackerHub_5.png"),
       ],
-      tech: ["React", "TailwindCSS", "", "Express.js", "Sequelize", "React", "Redux"],
-      features: ["Trip CRUD", "Search by name and filters", "REST Countries API integration"],
+      tech: ["React.js", "Redux Toolkit", "TailwindCSS", "GSAP", "D3.js", "IndexedDB"],
+      techDetails: {
+        frontend: ["React.js", "Redux Toolkit", "TailwindCSS (tema Energetic Zen)", "GSAP", "D3.js"],
+        backend: ["Motor de Juego Personalizado", "Service Worker"],
+        database: ["IndexedDB (~250MB+)", "LocalStorage (5-10MB)"],
+        deployment: ["Vercel"],
+        tools: ["Redux DevTools", "CSS Transforms", "PWA"]
+      },
+      features: [
+        tContent('trackerhubFeature1'),
+        tContent('trackerhubFeature2'),
+        tContent('trackerhubFeature3'),
+        tContent('trackerhubFeature4'),
+        tContent('trackerhubFeature5'),
+        tContent('trackerhubFeature6'),
+      ],
+      challenges: [
+        tContent('trackerhubChallenge1'),
+        tContent('trackerhubChallenge2'),
+        tContent('trackerhubChallenge3'),
+      ],
+      solutions: [
+        tContent('trackerhubSolution1'),
+        tContent('trackerhubSolution2'),
+        tContent('trackerhubSolution3'),
+      ],
+      results: [
+        tContent('trackerhubResult1'),
+        tContent('trackerhubResult2'),
+        tContent('trackerhubResult3'),
+        tContent('trackerhubResult4'),
+      ],
+      timeline: [
+        { phase: tContent('trackerhubPhase1'), duration: tContent('trackerhubDuration1'), description: tContent('trackerhubPhaseDesc1') },
+        { phase: tContent('trackerhubPhase2'), duration: tContent('trackerhubDuration2'), description: tContent('trackerhubPhaseDesc2') },
+        { phase: tContent('trackerhubPhase3'), duration: tContent('trackerhubDuration3'), description: tContent('trackerhubPhaseDesc3') },
+        { phase: tContent('trackerhubPhase4'), duration: tContent('trackerhubDuration4'), description: tContent('trackerhubPhaseDesc4') },
+      ],
       links: {
-        github: "https://github.com/tomas26j/TrackerHub",
-        demo: "https://tracker-hub-sooty.vercel.app/",
+        github: "https://github.com/example/trackerhub",
+        demo: "https://trackerhub.vercel.app"
       },
     },
   ]
@@ -225,7 +330,7 @@ export default function Projects() {
       description: tMini('videoSpeedDesc'),
       image: getStaticPath("/miniprojects/Universal-video-speed.png"),
       tech: ["React", "CSS3"],
-      links: { github: "https://github.com/tomas26j/UniversalVideoSpeed", demo: "#" },
+      links: { github: "https://github.com/tomas26j/UniversalVideoSpeed", demo: null }, // demo a null para desactivar
     },
     {
       title: tMini('linkBioTitle'),
@@ -248,7 +353,7 @@ export default function Projects() {
   }, [])
 
   return (
-    <section id="projects" className="py-20 px-4 sm:px-8 lg:px-16 bg-background/95 dark:bg-background">
+    <section id="projects" className="py-20 px-4 sm:px-8 lg:px-16 bg-background/60 dark:bg-background/60">
       <div className="max-w-6xl mx-auto">
         <h2 data-aos="fade-up" className="text-3xl font-bold mb-12">
           <span className="text-muted-foreground">03.</span> {t('heading')}
@@ -267,7 +372,7 @@ export default function Projects() {
                     <div className="text-sm text-muted-foreground">Featured Project</div>
                     <CardTitle className="text-2xl">{project.title}</CardTitle>
                     <CardDescription className="text-muted-foreground">{project.description}</CardDescription>
-                    <div className="text-sm text-muted-foreground">{project.inspiration}</div>
+                    <div className="text-sm text-muted-foreground">{project.overview}</div>
                     <div className="flex flex-wrap gap-3">
                       {project.tech.map((t, i) => (
                         <span key={i} className="text-sm text-primary">
@@ -275,7 +380,7 @@ export default function Projects() {
                         </span>
                       ))}
                     </div>
-                    <div className="flex gap-4">
+                    <div className="flex gap-4 items-center mt-2">
                       {/* Elimino el botón de GitHub, dejo solo el de demo */}
                       <Link
                         href={project.links.demo}
@@ -285,6 +390,13 @@ export default function Projects() {
                       >
                         <ExternalLink className="h-5 w-5" />
                       </Link>
+                      <button
+                        className="inline-flex items-center gap-2 px-4 py-2 rounded bg-primary text-primary-foreground hover:bg-primary/90 transition-colors text-sm font-medium"
+                        onClick={() => { setSelectedProject(project); setModalOpen(true); }}
+                      >
+                        <Eye className="w-4 h-4" />
+                        {tDetails('moreDetails')}
+                      </button>
                     </div>
                   </div>
                   <ImageCarousel images={project.images} title={project.title} />
@@ -307,6 +419,7 @@ export default function Projects() {
                     <div className="text-sm text-muted-foreground">Featured Project</div>
                     <CardTitle className="text-2xl">{project.title}</CardTitle>
                     <CardDescription className="text-muted-foreground">{project.description}</CardDescription>
+                    <div className="text-sm text-muted-foreground">{project.overview}</div>
                     <div className="flex flex-wrap gap-3">
                       {project.tech.map((t, i) => (
                         <span key={i} className="text-sm text-primary">
@@ -314,7 +427,7 @@ export default function Projects() {
                         </span>
                       ))}
                     </div>
-                    <div className="flex gap-4">
+                    <div className="flex gap-4 items-center mt-2">
                       <Link
                         href={project.links.github}
                         className="text-foreground/60 hover:text-foreground dark:text-foreground/80 dark:hover:text-foreground"
@@ -331,6 +444,13 @@ export default function Projects() {
                       >
                         <ExternalLink className="h-5 w-5" />
                       </Link>
+                      <button
+                        className="inline-flex items-center gap-2 px-4 py-2 rounded bg-primary text-primary-foreground hover:bg-primary/90 transition-colors text-sm font-medium"
+                        onClick={() => { setSelectedProject(project); setModalOpen(true); }}
+                      >
+                        <Eye className="w-4 h-4" />
+                        {tDetails('moreDetails')}
+                      </button>
                     </div>
                   </div>
                   <ImageCarousel images={project.images} title={project.title} />
@@ -340,22 +460,15 @@ export default function Projects() {
           </div>
         </div>
 
+        {/* Modal de detalles de proyecto */}
+        <FullScreenProjectModal
+          project={selectedProject}
+          open={modalOpen && !!selectedProject}
+          onClose={() => { setModalOpen(false); setSelectedProject(null); }}
+        />
+
         {/* Educational/Mini Projects Section */}
         <div>
-          {/* Sandbox Badge */}
-          <div className="flex justify-center mb-6">
-            <a
-              href="https://sandbox.tuportfolio.com" // <-- Change this URL to your real sandbox
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-yellow-400/90 hover:bg-yellow-500 text-black font-semibold shadow-lg border-2 border-yellow-600 transition-all text-base animate-bounce-slow"
-              style={{ zIndex: 10 }}
-            >
-              <span role="img" aria-label="sandbox">🧪</span>
-              {t('sandboxBadge')}
-              <span className="hidden sm:inline">{t('sandboxDesc')}</span>
-            </a>
-          </div>
           <h3 data-aos="fade-up" className="text-2xl font-semibold mb-8 text-primary">
             {t('educational')}
           </h3>
@@ -390,9 +503,16 @@ export default function Projects() {
                     <Link href={project.links.github} className="text-foreground/60 hover:text-foreground" target="_blank" rel="noopener noreferrer">
                       <Github className="h-4 w-4" />
                     </Link>
-                    <Link href={project.links.demo} className="text-foreground/60 hover:text-foreground" target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="h-4 w-4" />
-                    </Link>
+                    {/* Botón de demo/deshabilitado según corresponda */}
+                    {typeof project.links.demo === 'string' && project.links.demo && project.links.demo !== "#" ? (
+                      <Link href={project.links.demo} className="text-foreground/60 hover:text-foreground" target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="h-4 w-4" />
+                      </Link>
+                    ) : project.title === tMini('todoTitle') || project.title === tMini('sushiTitle') ? (
+                      <span className="text-foreground/30 cursor-not-allowed">
+                        <ExternalLink className="h-4 w-4" />
+                      </span>
+                    ) : null}
                   </div>
                 </CardContent>
               </Card>

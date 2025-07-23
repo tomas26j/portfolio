@@ -76,7 +76,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 px-4 sm:px-8 lg:px-16 bg-background/95 dark:bg-background">
+    <section id="contact" className="py-20 px-4 sm:px-8 lg:px-16 bg-background/60 dark:bg-background/60">
       <div data-aos="fade-up" className="max-w-2xl mx-auto text-center">
         <h2 className="text-3xl font-bold mb-4">{t('heading')}</h2>
         <p className="text-muted-foreground mb-8">

@@ -19,7 +19,7 @@ export async function generateStaticParams() {
 export default function Home() {
   return (
     <ThemeWrapper>
-      <main className="min-h-screen bg-background relative">
+      <main className="min-h-screen bg-background/50 relative">
         <Navbar />
         <Hero />
         <AboutMe />
