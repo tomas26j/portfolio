@@ -15,7 +15,7 @@ export function ThemeWrapper({ children }: ThemeWrapperProps) {
   return (
     <>
       <div
-        className="fixed inset-0 w-full h-full pointer-events-none opacity-75 dark:opacity-45 z-0"
+        className="fixed inset-0 w-full h-full pointer-events-none opacity-100 light: opacity-75 dark:opacity-60 z-0"
         style={{
           backgroundImage: `url(${backgroundUrl})`,
           backgroundRepeat: 'repeat',
