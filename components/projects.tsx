@@ -152,6 +152,38 @@ export default function Projects() {
       },
     },
     {
+      slug: "Playa-marlin-com",
+      title: tContent('cancunTitle'),
+      description: tContent('cancunDesc'),
+      overview: tContent('cancunOverview'),
+      images: [
+        getStaticPath("/cancun.com.ar/cancun-com-ar_00.png"),
+        getStaticPath("/cancun.com.ar/cancun-com-ar_0.png"),
+        getStaticPath("/cancun.com.ar/cancun-com-ar_1.png"),
+        getStaticPath("/cancun.com.ar/cancun-com-ar_2.png"),
+        getStaticPath("/cancun.com.ar/cancun-com-ar_3.png"),
+      ],
+      tech: ["WordPress", "JavaScript", "PHP", "Elementor"],
+      techDetails: {
+        frontend: ["WordPress", "Elementor"],
+        backend: ["PHP"],
+        database: ["MySQL"],
+        deployment: ["Shared Hosting"],
+        tools: ["Google Analytics"]
+      },
+      features: [tContent('cancunFeature1'), tContent('cancunFeature2')],
+      challenges: [tContent('cancunChallenge1')],
+      solutions: [tContent('cancunSolution1')],
+      results: [tContent('cancunResult1')],
+      timeline: [
+        { phase: tContent('cancunPhase1'), duration: tContent('cancunDuration1'), description: tContent('cancunPhaseDesc1') },
+      ],
+      links: {
+        github: "github.com/tomas26j",
+        demo: "https://www.cancun.com.ar",
+      },
+    },
+    {
       slug: "burbank-detox-center",
       title: tContent('burbankTitle'),
       description: tContent('burbankDesc'),
@@ -298,7 +330,7 @@ export default function Projects() {
       ],
       links: {
         github: "https://github.com/example/trackerhub",
-        demo: "https://trackerhub.vercel.app"
+        demo: "https://tracker-hub-sooty.vercel.app/"
       },
     },
   ]
