@@ -57,7 +57,7 @@ export default function LearningPath() {
     <section id="learning-path" className="py-20 px-4 sm:px-8 lg:px-16 bg-background/60 dark:bg-background/60">
       <div className="max-w-6xl mx-auto">
         <h2 data-aos="fade-up" className="text-3xl font-bold mb-12">
-          <span className="text-muted-foreground">02.</span> {t('heading')}
+          <span className="text-muted-foreground">04.</span> {t('heading')}
         </h2>
         <div className="relative">
           {/* Timeline line */}

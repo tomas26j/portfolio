@@ -39,7 +39,7 @@ const CertificationCarousel: React.FC = () => {
     <section className="w-full bg-background/60 dark:bg-background/60 py-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-8 lg:px-16">
         <h2 className="text-3xl font-bold mb-8">
-          <span className="text-muted-foreground">03.</span> {t('heading')}
+          <span className="text-muted-foreground">05.</span> {t('heading')}
         </h2>
         <div className="md:overflow-hidden">
           <div className="flex flex-col md:flex-row md:animate-carousel">

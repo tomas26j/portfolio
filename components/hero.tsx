@@ -50,7 +50,7 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center px-4 sm:px-8 lg:px-16 pt-20">
       <div id="HERO" data-aos="fade-up" className="w-full max-w-6xl mx-auto grid lg:grid-cols-2 gap-8 items-center">
-        <div className="space-y-6">
+        <div className="space-y-6 sm:flex sm:flex-col sm:justify-start sm:items-center sm:mt-[70px]">
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight">
             {t('title')}
           </h1>
@@ -92,7 +92,7 @@ export default function Hero() {
         </div>
         <div className="relative w-full h-[500px]">
           <Image
-            src={getStaticPath("/New Project-4.png")}
+            src={getStaticPath("/image.png")}
             alt="Retrato en arte ASCII"
             fill
             className="object-contain rounded-lg"
@@ -102,3 +102,4 @@ export default function Hero() {
     </section>
   )
 }
+//src={getStaticPath("/New Project-4.png")}

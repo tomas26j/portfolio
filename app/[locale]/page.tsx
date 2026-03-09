@@ -23,10 +23,10 @@ export default function Home() {
         <Navbar />
         <Hero />
         <AboutMe />
-        <LearningPath />
-        <Projects />
-        <CertificationCarousel />
         <Experience />
+        <Projects />
+        <LearningPath />
+        <CertificationCarousel />
         <Contact />
       </main>
     </ThemeWrapper>

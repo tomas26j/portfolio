@@ -153,15 +153,15 @@ export default function Projects() {
     },
     {
       slug: "Playa-marlin-com",
-      title: tContent('cancunTitle'),
-      description: tContent('cancunDesc'),
-      overview: tContent('cancunOverview'),
+      title: tContent('playaMarlinTitle'),
+      description: tContent('playaMarlinDesc'),
+      overview: tContent('playaMarlinOverview'),
       images: [
-        getStaticPath("/cancun.com.ar/cancun-com-ar_00.png"),
-        getStaticPath("/cancun.com.ar/cancun-com-ar_0.png"),
-        getStaticPath("/cancun.com.ar/cancun-com-ar_1.png"),
-        getStaticPath("/cancun.com.ar/cancun-com-ar_2.png"),
-        getStaticPath("/cancun.com.ar/cancun-com-ar_3.png"),
+        getStaticPath("/playamarlin/playamarlin_1.png"),
+        getStaticPath("/playamarlin/playamarlin_2.png"),
+        getStaticPath("/playamarlin/playamarlin_3.png"),
+        getStaticPath("/playamarlin/playamarlin_4.png"),
+        getStaticPath("/playamarlin/playamarlin_5.png"),
       ],
       tech: ["WordPress", "JavaScript", "PHP", "Elementor"],
       techDetails: {
@@ -171,16 +171,16 @@ export default function Projects() {
         deployment: ["Shared Hosting"],
         tools: ["Google Analytics"]
       },
-      features: [tContent('cancunFeature1'), tContent('cancunFeature2')],
-      challenges: [tContent('cancunChallenge1')],
-      solutions: [tContent('cancunSolution1')],
-      results: [tContent('cancunResult1')],
+      features: [tContent('playaMarlinFeature1'), tContent('playaMarlinFeature2')],
+      challenges: [tContent('playaMarlinChallenge1')],
+      solutions: [tContent('playaMarlinSolution1')],
+      results: [tContent('playaMarlinResult1')],
       timeline: [
-        { phase: tContent('cancunPhase1'), duration: tContent('cancunDuration1'), description: tContent('cancunPhaseDesc1') },
+        { phase: tContent('playaMarlinPhase1'), duration: tContent('playaMarlinDuration1'), description: tContent('playaMarlinPhaseDesc1') },
       ],
       links: {
         github: "github.com/tomas26j",
-        demo: "https://www.cancun.com.ar",
+        demo: "https://www.playamarlin.com",
       },
     },
     {
@@ -335,6 +335,102 @@ export default function Projects() {
     },
   ]
 
+  const foritProjects = [
+    {
+      slug: "barpoint",
+      title: tContent('pointsTitle'),
+      description: tContent('pointsDesc'),
+      overview: tContent('pointsOverview'),
+      images: [
+        getStaticPath("/barpoint/barpoint_1.png"),
+        getStaticPath("/barpoint/barpoint_2.png"),
+        getStaticPath("/barpoint/barpoint_3.png"),
+      ],
+      tech: ["TypeScript", "React", "Node.js", "Express", "TypeORM", "SQLite", "MercadoPago", "Docker", "Vitest"],
+      techDetails: {
+        frontend: ["React (SSR)", "TypeScript", "PWA-ready"],
+        backend: ["Node.js", "Express", "TypeScript", "TypeORM", "UseCases/Services Architecture"],
+        database: ["SQLite", "TypeORM (migraciones)"],
+        deployment: ["Docker Compose"],
+        tools: ["MercadoPago SDK", "OAuth (Google)", "JWT", "RBAC", "SecureBar", "Vitest", "Webhooks"]
+      },
+      features: [tContent('pointsFeature1'), tContent('pointsFeature2')],
+      challenges: [tContent('pointsChallenge1')],
+      solutions: [tContent('pointsSolution1')],
+      results: [tContent('pointsResult1')],
+      timeline: [
+        { phase: tContent('pointsPhase1'), duration: tContent('pointsDuration1'), description: tContent('pointsPhaseDesc1') },
+      ],
+      links: {
+        github: "#",
+        demo: "#",
+      },
+    },
+    {
+      slug: "banco-alimentos",
+      title: tContent('bancoTitle'),
+      description: tContent('bancoDesc'),
+      overview: tContent('bancoOverview'),
+      images: [
+        getStaticPath("/BDA/BDA-0.png"),
+        getStaticPath("/BDA/BDA-1.png"),
+        getStaticPath("/BDA/BDA-2.png"),
+        getStaticPath("/BDA/BDA-3.png"),
+      ],
+      tech: ["TypeScript", "React", "Capacitor", "Tailwind CSS", "Yarn Workspaces", "Storybook", "Vitest", "Firebase", "APN"],
+      techDetails: {
+        frontend: ["React + Capacitor", "TypeScript", "Tailwind CSS", "PWA-friendly"],
+        backend: ["Backend externo (contratos API)"],
+        database: ["Backend externo"],
+        deployment: ["Capacitor builds", "CI/CD pipelines"],
+        tools: ["Yarn Workspaces (monorepo)", "Storybook", "Vitest (TDD)", "Firebase/APN", "Clean Architecture"]
+      },
+      features: [tContent('bancoFeature1'), tContent('bancoFeature2')],
+      challenges: [tContent('bancoChallenge1')],
+      solutions: [tContent('bancoSolution1')],
+      results: [tContent('bancoResult1')],
+      timeline: [
+        { phase: tContent('bancoPhase1'), duration: tContent('bancoDuration1'), description: tContent('bancoPhaseDesc1') },
+      ],
+      links: {
+        github: "#",
+        demo: "#",
+      },
+    },
+    {
+      slug: "ulpan",
+      title: tContent('ulpanTitle'),
+      description: tContent('ulpanDesc'),
+      overview: tContent('ulpanOverview'),
+      images: [
+        getStaticPath("/ulpan/ulpan_0.png"),
+        getStaticPath("/ulpan/ulpan_1.png"),
+        getStaticPath("/ulpan/ulpan_2.png"),
+        getStaticPath("/ulpan/ulpan_3.png"),
+        getStaticPath("/ulpan/ulpan_4.png"),
+      ],
+      tech: ["PHP", "Laravel 8.x", "React", "Redux", "MySQL", "Bootstrap 4", "SASS", "MercadoPago", "PayPal"],
+      techDetails: {
+        frontend: ["React (SPA)", "Redux", "React Router", "Bootstrap 4", "SASS", "RTL Support"],
+        backend: ["Laravel 8.x", "PHP", "RESTful API", "Blade"],
+        database: ["MySQL / MariaDB", "Eloquent ORM"],
+        deployment: ["Laravel Mix", "File Storage"],
+        tools: ["MercadoPago SDK", "PayPal (Omnipay)", "PHPUnit", "Laravel Debugbar", "Redux DevTools", "Maatwebsite Excel"]
+      },
+      features: [tContent('ulpanFeature1'), tContent('ulpanFeature2')],
+      challenges: [tContent('ulpanChallenge1')],
+      solutions: [tContent('ulpanSolution1')],
+      results: [tContent('ulpanResult1')],
+      timeline: [
+        { phase: tContent('ulpanPhase1'), duration: tContent('ulpanDuration1'), description: tContent('ulpanPhaseDesc1') },
+      ],
+      links: {
+        github: "#",
+        demo: "#",
+      },
+    },
+  ]
+
   const educationalProjects = [
     {
       title: tMini('meliTitle'),
@@ -390,7 +486,63 @@ export default function Projects() {
         <h2 data-aos="fade-up" className="text-3xl font-bold mb-12">
           <span className="text-muted-foreground">03.</span> {t('heading')}
         </h2>
-
+        {/* ForIT Team Projects Section */}
+        <div className="mb-16">
+          <h3 data-aos="fade-up" className="text-2xl font-semibold mb-8 text-primary">
+            {t('forit')}
+          </h3>
+          <div className="grid gap-8">
+            {foritProjects.map((project, index) => (
+              <Card key={index} data-aos="fade-up" className="bg-card border-none dark:bg-card/20">
+                <CardContent className="grid lg:grid-cols-2 gap-8 p-6">
+                  <div className="space-y-4">
+                    <div className="text-sm text-muted-foreground">Featured Project</div>
+                    <CardTitle className="text-2xl">{project.title}</CardTitle>
+                    <CardDescription className="text-muted-foreground">{project.description}</CardDescription>
+                    <div className="text-sm text-muted-foreground">{project.overview}</div>
+                    <div className="flex flex-wrap gap-3">
+                      {project.tech.map((t, i) => (
+                        <span key={i} className="text-sm text-primary">
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="flex gap-4 items-center mt-2">
+                      {project.links.github && project.links.github !== "#" && (
+                        <Link
+                          href={project.links.github}
+                          className="text-foreground/60 hover:text-foreground dark:text-foreground/80 dark:hover:text-foreground"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Github className="h-5 w-5" />
+                        </Link>
+                      )}
+                      {project.links.demo && project.links.demo !== "#" && (
+                        <Link
+                          href={project.links.demo}
+                          className="text-foreground/60 hover:text-foreground dark:text-foreground/80 dark:hover:text-foreground"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <ExternalLink className="h-5 w-5" />
+                        </Link>
+                      )}
+                      <button
+                        className="inline-flex items-center gap-2 px-4 py-2 rounded bg-primary text-primary-foreground hover:bg-primary/90 transition-colors text-sm font-medium"
+                        onClick={() => { setSelectedProject(project); setModalOpen(true); }}
+                      >
+                        <Eye className="w-4 h-4" />
+                        {tDetails('moreDetails')}
+                      </button>
+                    </div>
+                  </div>
+                  <ImageCarousel images={project.images} title={project.title} />
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
         {/* WordPress Sites Section */}
         <div className="mb-16">
           <h3 data-aos="fade-up" className="text-2xl font-semibold mb-8 text-primary">
@@ -491,6 +643,7 @@ export default function Projects() {
             ))}
           </div>
         </div>
+
 
         {/* Modal de detalles de proyecto */}
         <FullScreenProjectModal
