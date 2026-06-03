@@ -10,11 +10,11 @@
  * element. The animation is executed once and leaves the element in its
  * final state.
  */
-export const fadeUpAnimation = (element: Element) => {
+export const fadeUpAnimation = (element: HTMLElement) => {
   // Guard against browsers that might not support WAAPI (very rare nowadays)
   if (!("animate" in element)) {
     // Fallback – just reveal element instantly
-    element.classList.remove("opacity-0", "translate-y-24")
+    (element as HTMLElement).classList.remove("opacity-0", "translate-y-24")
     return
   }
 
@@ -43,7 +43,7 @@ export const setupIntersectionObserver = () => {
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          fadeUpAnimation(entry.target)
+          fadeUpAnimation(entry.target as HTMLElement)
           observer.unobserve(entry.target)
         }
       })
