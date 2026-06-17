@@ -59,6 +59,8 @@
   "learningPath": {
     "section": "Educación",
     "heading": "Mi Trayectoria Académica",
+    "mentoria": "Mentoría Profesional",
+    "mentoriaDesc1": "Mentoría de 5 meses con foco en crecimiento técnico, preparación para entrevistas y proyectos paralelos.",
     "bachelor": "Licenciatura en Ciencia de Datos",
     "bachelorDesc1": "Actualmente cursando la Licenciatura en Ciencia de Datos en UNSAM.",
     "bachelorDesc2": "Mi objetivo es adquirir habilidades de análisis de datos para resolver problemas reales y contribuir al desarrollo de soluciones innovadoras.",
