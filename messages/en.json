@@ -20,14 +20,14 @@
     "ulpanDesc2": "Implementation of automatic evaluation engine distributed in 7 logical blocks, intelligent geographic filtering and real-time quota management.",
     "ulpanDesc3": "Integration of payment gateways (MercadoPago and PayPal), email notification system, Excel report export and RTL support for Hebrew.",
     "freelanceRole": "Wordpress & React Developer",
-    "freelanceDesc": "As a freelance developer, I have a proven track record of creating custom websites tailored to my clients' specific needs. I have extensive experience with technologies such as React, WordPress, and Next.js, along with PostgreSQL, enabling me to deliver scalable and user-friendly solutions.",
-    "retailRole": "Retail salesperson",
-    "carDetailerRole": "Car Detailer"
+    "freelanceDesc": "As a freelance developer, I have a proven track record of creating custom websites tailored to my clients' specific needs. I have extensive experience with technologies such as React, WordPress, and Next.js, along with PostgreSQL, enabling me to deliver scalable and user-friendly solutions."
   },
   "hero": {
     "title": "Tomás Riera.",
     "subtitle": "Fullstack Developer, based in Buenos Aires.",
-    "downloadCV": "Download CV"
+    "downloadCV": "Download CV",
+    "downloading": "Downloading...",
+    "downloadError": "Error downloading the CV. Please contact me directly to get a copy."
   },
   "navbar": {
     "aboutMe": "About Me",

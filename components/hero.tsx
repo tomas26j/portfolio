@@ -40,8 +40,7 @@ export default function Hero() {
       console.log('CV descargado exitosamente');
     } catch (error) {
       console.error('Error al descargar el CV:', error);
-      // Mostrar mensaje de error al usuario
-      alert('Error al descargar el CV. Por favor, contacta directamente para obtener una copia.');
+      alert(t('downloadError'));
     } finally {
       setIsDownloading(false);
     }
@@ -68,7 +67,7 @@ export default function Hero() {
               {isDownloading ? (
                 <>
                   <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-black mr-2"></div>
-                  Descargando...
+                  {t('downloading')}
                 </>
               ) : (
                 <>
