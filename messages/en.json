@@ -4,8 +4,8 @@
   "aboutMe": {
     "section": "About Me",
     "heading": "About Me",
-    "intro": "Hello! I'm Tomas, a passionate fullstack developer with a keen interest in building digital experiences that make a difference. My journey in tech started back in 2020, and since then, I've had the privilege of learning a diverse range of technologies and projects.",
-    "focus": "My focus is on creating efficient, scalable, and user-friendly solutions. I love diving into complex problems and emerging with elegant solutions. Whether it's crafting responsive front-end interfaces or architecting robust back-end systems, I'm always excited to take on new challenges.",
+    "intro": "Hi! I'm Tomás, a fullstack developer. My programming foundations were built during an unfinished game development degree: syntax, data structures, and capstone projects like Conway's Game of Life in C++, Java and C#. During the pandemic, I pivoted to web development through intensive bootcamps and courses. My first freelance experiences were technically shallow (WordPress, static sites, and personal React/Next.js projects). The exponential professional growth came when I joined ForIT, tackling real problems in production projects with real clients.",
+    "focus": "Today I focus on writing maintainable, scalable code with a sense of purpose. I work with full stacks (TypeScript + React, NestJS + Prisma + Next.js, React Native + Capacitor) on real products with real users. I'm passionate about architecture problems, code quality, and technical decisions with measurable impact.",
     "skillsTitle": "Skills & Technologies"
   },
   "contact": "Contact",
