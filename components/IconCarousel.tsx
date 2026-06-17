@@ -1,15 +1,19 @@
 'use client'
 import React from 'react';
-import { 
-  SiJavascript, SiReact, SiNodedotjs, SiExpress, SiNextdotjs, 
-  SiVuedotjs, SiPostgresql, SiMongodb, SiHtml5, SiCss3, 
-  SiStyledcomponents, SiTailwindcss, SiGit
+import {
+  SiJavascript, SiTypescript, SiReact, SiNextdotjs,
+  SiNodedotjs, SiExpress, SiNestjs, SiPrisma,
+  SiLaravel, SiPhp, SiPostgresql, SiMongodb,
+  SiHtml5, SiCss3, SiTailwindcss, SiStyledcomponents,
+  SiDocker, SiGit
 } from 'react-icons/si';
 
 const icons = [
-  SiJavascript, SiReact, SiNodedotjs, SiExpress, SiNextdotjs,
-  SiVuedotjs, SiPostgresql, SiMongodb, SiHtml5, SiCss3,
-  SiStyledcomponents, SiTailwindcss, SiGit
+  SiJavascript, SiTypescript, SiReact, SiNextdotjs,
+  SiNodedotjs, SiExpress, SiNestjs, SiPrisma,
+  SiLaravel, SiPhp, SiPostgresql, SiMongodb,
+  SiHtml5, SiCss3, SiTailwindcss, SiStyledcomponents,
+  SiDocker, SiGit
 ];
 
 const IconCarousel: React.FC = () => {
