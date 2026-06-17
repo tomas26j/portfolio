@@ -3,7 +3,17 @@
 import * as React from "react"
 import { ThemeProvider as NextThemesProvider } from "next-themes"
 
-export function ThemeProvider({ children }: { children: React.ReactNode }) {
+export function ThemeProvider({
+  children,
+  attribute = "class",
+  defaultTheme = "system",
+  enableSystem = true,
+}: {
+  children: React.ReactNode
+  attribute?: "class" | "data-theme"
+  defaultTheme?: string
+  enableSystem?: boolean
+}) {
   const [mounted, setMounted] = React.useState(false)
 
   React.useEffect(() => {
@@ -16,9 +26,9 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
   return (
     <NextThemesProvider
-      attribute="class"
-      defaultTheme="system"
-      enableSystem
+      attribute={attribute}
+      defaultTheme={defaultTheme}
+      enableSystem={enableSystem}
       disableTransitionOnChange
     >
       {children}

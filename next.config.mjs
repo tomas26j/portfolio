@@ -10,17 +10,11 @@ const nextConfig = {
     unoptimized: true,
   },
   eslint: {
-    ignoreDuringBuilds: true,
+    ignoreDuringBuilds: false,
   },
   typescript: {
-    ignoreBuildErrors: true,
+    ignoreBuildErrors: false,
   },
-  // Configuración para archivos estáticos
-  experimental: {
-    appDir: true,
-  },
-  // Asegurar que los archivos estáticos se copien correctamente
-  distDir: 'out',
 };
 
 // Exporta la configuración envuelta con el plugin de next-intl
