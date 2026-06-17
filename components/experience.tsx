@@ -12,6 +12,16 @@ export default function Experience() {
   
   const timeline = [
     {
+      company: t('empowerCompany'),
+      date: t('empowerDate'),
+      role: t('empowerRole'),
+      description: [
+        t('empowerDesc1'),
+        t('empowerDesc2'),
+        t('empowerDesc3')
+      ]
+    },
+    {
       company: t('ulpanCompany'),
       date: t('ulpanDate'),
       role: t('ulpanRole'),
@@ -22,31 +32,31 @@ export default function Experience() {
       ]
     },
     {
-      company: "ForIT — Banco de Alimentos",
-      date: "DEC 2025 - FEB 2026",
-      role: "Desarrollador Mobile (React + Capacitor)",
+      company: t('bdaCompany'),
+      date: t('bdaDate'),
+      role: t('bdaRole'),
       description: [
-        "Desarrollo de app híbrida para donantes y beneficiarios: publicación/aceptación de donaciones y gestión de datos de entrega.",
-        "Integración de notificaciones push (Firebase-APN), caching y manejo de offline, y análisis-descarga de historiales.",
-        "Trabajo con monorepo (yarn workspaces), Storybook, Tailwind y prácticas TDD."
+        t('bdaDesc1'),
+        t('bdaDesc2'),
+        t('bdaDesc3')
       ]
     },
     {
-      company: "ForIT - BarPoint",
-      date: "SEP 2025 - DEC 2025",
-      role: "Desarrollador Fullstack",
+      company: t('barpointCompany'),
+      date: t('barpointDate'),
+      role: t('barpointRole'),
       description: [
-        "Implementación de core features: autenticación (Google + email), RBAC, gestión de promociones y sistema de puntos.",
-        "Desarrollo de flujos QR para registro y canje, integración con MercadoPago, y paneles por rol (Owner/Employee/Admin/Consumer).",
-        "TDD con Vitest, React SSR + re-hydration, TypeORM (SQLite) y despliegue con Docker Compose."
+        t('barpointDesc1'),
+        t('barpointDesc2'),
+        t('barpointDesc3')
       ]
     },
     {
-      company: "Freelance",
-      date: "JUN 2023 - JUL 2025",
+      company: t('freelanceCompany'),
+      date: t('freelanceDate'),
       role: t('freelanceRole'),
       description: [t('freelanceDesc')]
-    },    
+    },
   ]
 
   return (
