@@ -12,10 +12,11 @@ export default function AboutMe() {
   }, []);
   
   const skills = [
-    "JavaScript (ES6+)", "React", "Node.js", "Express", 
-    "Next.js", "VUE", "PostgreSQL", "MongoDB",
-    "HTML5", "CSS3", "Styled Components", "Tailwind CSS",
-    "Git", "Agile Methodologies", "Scrum", "CI/CD"
+    "JavaScript (ES6+)", "TypeScript", "React", "Next.js",
+    "Node.js", "Express", "NestJS", "Prisma",
+    "Laravel", "PHP", "PostgreSQL", "MongoDB",
+    "HTML5", "CSS3", "Tailwind CSS", "Styled Components",
+    "Docker", "Git", "Agile Methodologies", "Scrum", "CI/CD"
   ]
   
   return (

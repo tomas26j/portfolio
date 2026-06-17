@@ -4,8 +4,8 @@
   "aboutMe": {
     "section": "Sobre mí",
     "heading": "Sobre mí",
-    "intro": "¡Hola! Soy Tomás, un desarrollador fullstack apasionado con gran interés en construir experiencias digitales que marquen la diferencia. Mi camino en la tecnología comenzó en 2020 y desde entonces he tenido el privilegio de aprender una amplia gama de tecnologías y proyectos.",
-    "focus": "Mi enfoque está en crear soluciones eficientes, escalables y fáciles de usar. Me encanta enfrentarme a problemas complejos y encontrar soluciones elegantes. Ya sea creando interfaces front-end responsivas o diseñando sistemas back-end robustos, siempre estoy emocionado de asumir nuevos desafíos.",
+    "intro": "¡Hola! Soy Tomás, desarrollador fullstack. Mis bases en programación las construí cursando una carrera inconclusa de desarrollo de videojuegos: sintaxis, estructuras de datos en C#, C++ y Java. Durante la pandemia pivoté hacia el desarrollo web a través de bootcamps y cursos intensivos. Mis primeras experiencias freelance de poca profundidad técnica (WordPress, sitios estáticos y proyectos personales en React/Next.js). El crecimiento profesional exponencial llegó al empezar a trabajar en ForIT, enfrentando problemas reales en proyectos productivos con clientes.",
+    "focus": "Hoy me enfoco en escribir código mantenible, escalable y con sentido de propósito. Trabajo con stacks completos (TypeScript + React, NestJS + Prisma + Next.js, React Native + Capacitor) sobre productos reales con usuarios reales. Me apasionan los problemas de arquitectura, la calidad del código y las decisiones técnicas con impacto medible.",
     "skillsTitle": "Habilidades y Tecnologías"
   },
   "contact": "Contacto",
