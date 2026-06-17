@@ -372,10 +372,10 @@ export default function Projects() {
       description: tContent('bancoDesc'),
       overview: tContent('bancoOverview'),
       images: [
-        getStaticPath("/BDA/BDA-0.png"),
-        getStaticPath("/BDA/BDA-1.png"),
-        getStaticPath("/BDA/BDA-2.png"),
-        getStaticPath("/BDA/BDA-3.png"),
+        getStaticPath("/bda/BDA-0.png"),
+        getStaticPath("/bda/BDA-1.png"),
+        getStaticPath("/bda/BDA-2.png"),
+        getStaticPath("/bda/BDA-3.png"),
       ],
       tech: ["TypeScript", "React", "Capacitor", "Tailwind CSS", "Yarn Workspaces", "Storybook", "Vitest", "Firebase", "APN"],
       techDetails: {
