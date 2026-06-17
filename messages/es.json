@@ -20,14 +20,14 @@
     "ulpanDesc2": "Implementación de motor de evaluación automática distribuido en 7 bloques lógicos, filtrado geográfico inteligente y gestión de cupos en tiempo real.",
     "ulpanDesc3": "Integración de pasarelas de pago (MercadoPago y PayPal), sistema de notificaciones por email, exportación de reportes a Excel y soporte RTL para hebreo.",
     "freelanceRole": "Desarrollador Wordpress & React",
-    "freelanceDesc": "Como desarrollador freelance, tengo experiencia comprobada creando sitios web a medida según las necesidades específicas de mis clientes. Poseo amplia experiencia con tecnologías como React, WordPress y Next.js, junto con PostgreSQL, lo que me permite entregar soluciones escalables y fáciles de usar.",
-    "retailRole": "Vendedor minorista",
-    "carDetailerRole": "Detailer de autos"
+    "freelanceDesc": "Como desarrollador freelance, tengo experiencia comprobada creando sitios web a medida según las necesidades específicas de mis clientes. Poseo amplia experiencia con tecnologías como React, WordPress y Next.js, junto con PostgreSQL, lo que me permite entregar soluciones escalables y fáciles de usar."
   },
   "hero": {
     "title": "Tomás Riera.",
     "subtitle": "Desarrollador Fullstack, con base en Buenos Aires.",
-    "downloadCV": "Descargar CV"
+    "downloadCV": "Descargar CV",
+    "downloading": "Descargando...",
+    "downloadError": "Error al descargar el CV. Por favor, contacta directamente para obtener una copia."
   },
   "navbar": {
     "aboutMe": "Sobre mí",
