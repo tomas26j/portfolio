@@ -59,6 +59,8 @@
   "learningPath": {
     "section": "Education",
     "heading": "My Learning Path",
+    "mentoria": "Professional Mentorship",
+    "mentoriaDesc1": "5-month mentorship focused on technical growth, interview preparation, and parallel projects.",
     "bachelor": "Bachelor's degree in Data Science",
     "bachelorDesc1": "Currently pursuing a Bachelor's degree in Data Science at UNSAM.",
     "bachelorDesc2": "My goal is to acquire data analysis skills to solve real-world problems and contribute to the development of innovative solutions.",

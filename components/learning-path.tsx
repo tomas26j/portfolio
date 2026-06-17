@@ -12,6 +12,14 @@ export default function LearningPath() {
 
   const learningTimeline = [
     {
+      program: t('mentoria'),
+      institution: "Globant-ForIT 2026",
+      date: "APRIL 2026 - PRESENT",
+      description: [
+        t('mentoriaDesc1')
+      ]
+    },
+    {
       program: t('bachelor'),
       institution: "UNSAM",
       date: "MARCH 2024 - PRESENT",
