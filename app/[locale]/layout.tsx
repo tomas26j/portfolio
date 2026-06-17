@@ -25,6 +25,9 @@ export default async function LocaleLayout({
   
   return (
     <html lang={locale} suppressHydrationWarning>
+      <head>
+        <meta httpEquiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline';" />
+      </head>
       <body className={inter.className} suppressHydrationWarning>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <NextIntlClientProvider locale={locale} messages={messages}>
