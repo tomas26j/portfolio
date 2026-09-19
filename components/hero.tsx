@@ -89,12 +89,14 @@ export default function Hero() {
             </div>
           </div>
         </div>
-        <div className="relative w-full h-[500px]">
+        <div className="relative w-full h-[500px] flex items-center justify-center">
+          <div className="absolute w-[60%] aspect-square rounded-full bg-foreground/10 blur-2xl" />
           <Image
-            src={getStaticPath("/image.png")}
-            alt="Retrato en arte ASCII"
+            src={getStaticPath("/Perfil-(1).png")}
+            alt="Retrato"
             fill
-            className="object-contain rounded-lg"
+            className="object-contain"
+            style={{ clipPath: 'circle(36% at center)' }}
           />
         </div>
       </div>
