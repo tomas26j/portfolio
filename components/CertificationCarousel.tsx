@@ -2,13 +2,15 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { X } from 'lucide-react';
+import { X, ArrowLeft, ExternalLink } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { getStaticPath } from '@/lib/utils';
 
 const CertificationCarousel: React.FC = () => {
   const t = useTranslations('certifications');
   const [modalOpen, setModalOpen] = useState(false);
+  // null = vista grilla, número = índice del cert seleccionado
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   useEffect(() => {
     if (modalOpen) {
@@ -18,6 +20,10 @@ const CertificationCarousel: React.FC = () => {
     }
     return () => { document.body.style.overflow = ''; };
   }, [modalOpen]);
+
+  const openGrid = () => { setSelectedIndex(null); setModalOpen(true); };
+  const openDetail = (index: number) => { setSelectedIndex(index); setModalOpen(true); };
+  const closeModal = () => { setModalOpen(false); setSelectedIndex(null); };
 
   // Ordenadas de más reciente a más antigua — reordenar manualmente según fechas
   const certifications = [
@@ -53,6 +59,8 @@ const CertificationCarousel: React.FC = () => {
     },
   ];
 
+  const selectedCert = selectedIndex !== null ? certifications[selectedIndex] : null;
+
   return (
     <section className="w-full bg-background/60 dark:bg-background/60 py-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-8 lg:px-16">
@@ -67,7 +75,7 @@ const CertificationCarousel: React.FC = () => {
               key={index}
               className="flex items-center justify-center cursor-pointer"
               title={cert.titulo}
-              onClick={() => setModalOpen(true)}
+              onClick={() => openDetail(index)}
             >
               <div className="relative w-full aspect-square max-w-[180px] transition-transform duration-200 hover:scale-110">
                 <Image
@@ -83,7 +91,7 @@ const CertificationCarousel: React.FC = () => {
 
         <div className="flex justify-center">
           <button
-            onClick={() => setModalOpen(true)}
+            onClick={openGrid}
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors text-sm font-medium"
           >
             Ver todas las certificaciones ({certifications.length})
@@ -95,51 +103,99 @@ const CertificationCarousel: React.FC = () => {
       {modalOpen && (
         <div
           className="fixed inset-0 z-50 flex items-start justify-center bg-black/80 p-4 overflow-y-auto"
-          onClick={() => setModalOpen(false)}
+          onClick={closeModal}
         >
           <div
-            className="relative bg-background rounded-xl w-full max-w-4xl my-8 p-6 sm:p-8"
+            className="relative bg-background rounded-xl w-full max-w-3xl my-8 p-6 sm:p-8"
             onClick={e => e.stopPropagation()}
           >
+            {/* Botón cerrar — siempre visible */}
             <button
               className="absolute top-4 right-4 text-muted-foreground hover:text-foreground bg-muted/50 hover:bg-muted rounded-full p-2 transition-colors"
-              onClick={() => setModalOpen(false)}
+              onClick={closeModal}
               aria-label="Cerrar"
             >
               <X className="h-5 w-5" />
             </button>
 
-            <h3 className="text-2xl font-bold mb-6">{t('heading')}</h3>
+            {/* Vista grilla */}
+            {selectedCert === null && (
+              <>
+                <h3 className="text-2xl font-bold mb-6 pr-10">{t('heading')}</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {certifications.map((cert, index) => (
+                    <button
+                      key={index}
+                      className="flex gap-4 p-4 rounded-lg bg-card dark:bg-card/20 hover:bg-card/60 dark:hover:bg-card/40 transition-colors text-left group"
+                      onClick={() => setSelectedIndex(index)}
+                    >
+                      <div className="relative w-[64px] h-[64px] flex-shrink-0">
+                        <Image src={cert.urlImagen} alt={cert.titulo} fill className="object-contain" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <p className="text-sm font-semibold group-hover:text-primary transition-colors line-clamp-2">
+                          {cert.titulo}
+                        </p>
+                        <p className="text-xs text-muted-foreground mt-1 line-clamp-2">
+                          {cert.descripcion}
+                        </p>
+                      </div>
+                    </button>
+                  ))}
+                </div>
+              </>
+            )}
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {certifications.map((cert, index) => (
-                <Link
-                  key={index}
-                  href={cert.linkInsignia}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`flex gap-4 p-4 rounded-lg bg-card dark:bg-card/20 hover:bg-card/80 dark:hover:bg-card/40 transition-colors group ${cert.linkInsignia === '#' ? 'pointer-events-none' : ''}`}
-                  onClick={cert.linkInsignia === '#' ? e => e.preventDefault() : undefined}
+            {/* Vista detalle */}
+            {selectedCert !== null && (
+              <>
+                <button
+                  className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors mb-6 pr-10"
+                  onClick={() => setSelectedIndex(null)}
                 >
-                  <div className="relative w-[72px] h-[72px] flex-shrink-0">
+                  <ArrowLeft className="h-4 w-4" />
+                  Todas las certificaciones
+                </button>
+
+                <div className="flex flex-col sm:flex-row gap-6 items-start">
+                  <div className="relative w-[140px] h-[140px] flex-shrink-0 mx-auto sm:mx-0">
                     <Image
-                      src={cert.urlImagen}
-                      alt={cert.titulo}
+                      src={selectedCert.urlImagen}
+                      alt={selectedCert.titulo}
                       fill
                       className="object-contain"
                     />
                   </div>
-                  <div className="flex-1 min-w-0">
-                    <h4 className="text-sm font-semibold mb-1 group-hover:text-primary transition-colors line-clamp-2">
-                      {cert.titulo}
-                    </h4>
-                    <p className="text-xs text-muted-foreground line-clamp-4">
-                      {cert.descripcion}
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold mb-4">{selectedCert.titulo}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {selectedCert.descripcion}
                     </p>
                   </div>
-                </Link>
-              ))}
-            </div>
+                </div>
+
+                <div className="flex gap-3 mt-8 justify-end flex-wrap">
+                  <button
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-border hover:bg-muted transition-colors text-sm"
+                    onClick={() => setSelectedIndex(null)}
+                  >
+                    <ArrowLeft className="h-4 w-4" />
+                    Todas las certificaciones
+                  </button>
+                  {selectedCert.linkInsignia !== '#' && (
+                    <Link
+                      href={selectedCert.linkInsignia}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors text-sm font-medium"
+                    >
+                      <ExternalLink className="h-4 w-4" />
+                      Ver certificado
+                    </Link>
+                  )}
+                </div>
+              </>
+            )}
           </div>
         </div>
       )}
