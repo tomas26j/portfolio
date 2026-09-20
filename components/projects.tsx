@@ -120,38 +120,6 @@ export default function Projects() {
 
   const wordpressProjects = [
     {
-      slug: "cancun-com-ar",
-      title: tContent('cancunTitle'),
-      description: tContent('cancunDesc'),
-      overview: tContent('cancunOverview'),
-      images: [
-        getStaticPath("/cancun.com.ar/cancun-com-ar_00.png"),
-        getStaticPath("/cancun.com.ar/cancun-com-ar_0.png"),
-        getStaticPath("/cancun.com.ar/cancun-com-ar_1.png"),
-        getStaticPath("/cancun.com.ar/cancun-com-ar_2.png"),
-        getStaticPath("/cancun.com.ar/cancun-com-ar_3.png"),
-      ],
-      tech: ["WordPress", "JavaScript", "PHP", "Elementor"],
-      techDetails: {
-        frontend: ["WordPress", "Elementor"],
-        backend: ["PHP"],
-        database: ["MySQL"],
-        deployment: ["Shared Hosting"],
-        tools: ["Google Analytics"]
-      },
-      features: [tContent('cancunFeature1'), tContent('cancunFeature2')],
-      challenges: [tContent('cancunChallenge1')],
-      solutions: [tContent('cancunSolution1')],
-      results: [tContent('cancunResult1')],
-      timeline: [
-        { phase: tContent('cancunPhase1'), duration: tContent('cancunDuration1'), description: tContent('cancunPhaseDesc1') },
-      ],
-      links: {
-        github: "github.com/tomas26j",
-        demo: "https://www.cancun.com.ar",
-      },
-    },
-    {
       slug: "Playa-marlin-com",
       title: tContent('playaMarlinTitle'),
       description: tContent('playaMarlinDesc'),
@@ -337,6 +305,36 @@ export default function Projects() {
 
   const foritProjects = [
     {
+      slug: "empower",
+      title: tContent('empowerTitle'),
+      description: tContent('empowerDesc'),
+      overview: tContent('empowerOverview'),
+      images: [
+        getStaticPath("/empower/empower_0.png"),
+        getStaticPath("/empower/empower_1.png"),
+        getStaticPath("/empower/empower_2.png"),
+      ],
+      tech: ["TypeScript", "NestJS", "Next.js 14", "Prisma", "PostgreSQL", "Docker", "Vitest"],
+      techDetails: {
+        frontend: ["Next.js 14 (App Router)", "TypeScript", "Tailwind CSS"],
+        backend: ["NestJS", "TypeScript", "Prisma ORM", "Clean Architecture", "RBAC"],
+        database: ["PostgreSQL", "Prisma migrations"],
+        deployment: ["Docker", "Docker Compose"],
+        tools: ["Vitest (TDD)", "Yarn Workspaces (monorepo)", "ESLint + Prettier + Husky"]
+      },
+      features: [tContent('empowerFeature1'), tContent('empowerFeature2'), tContent('empowerFeature3')],
+      challenges: [tContent('empowerChallenge1')],
+      solutions: [tContent('empowerSolution1')],
+      results: [tContent('empowerResult1')],
+      timeline: [
+        { phase: tContent('empowerPhase1'), duration: tContent('empowerDuration1'), description: tContent('empowerPhaseDesc1') },
+      ],
+      links: {
+        github: "#",
+        demo: "#",
+      },
+    },
+    {
       slug: "barpoint",
       title: tContent('pointsTitle'),
       description: tContent('pointsDesc'),
@@ -445,6 +443,7 @@ export default function Projects() {
       image: getStaticPath("/miniprojects/Sushi-bot_0.png"),
       tech: ["JavaScript", "API"],
       links: { github: "https://github.com/tomas26j/Chatbot-code-challenge", demo: "#" },
+      hidden: true,
     },
     {
       title: tMini('todoTitle'),
@@ -458,7 +457,8 @@ export default function Projects() {
       description: tMini('videoSpeedDesc'),
       image: getStaticPath("/miniprojects/Universal-video-speed.png"),
       tech: ["React", "CSS3"],
-      links: { github: "https://github.com/tomas26j/UniversalVideoSpeed", demo: null }, // demo a null para desactivar
+      links: { github: "https://github.com/tomas26j/UniversalVideoSpeed", demo: null },
+      hidden: true,
     },
     {
       title: tMini('linkBioTitle'),
@@ -466,6 +466,7 @@ export default function Projects() {
       image: getStaticPath("/miniprojects/Link-In-Bio_0.png"),
       tech: ["JavaScript", "CSS"],
       links: { github: "#", demo: "#" },
+      hidden: true,
     },
     {
       title: tMini('pomodoroTitle'),
@@ -658,7 +659,7 @@ export default function Projects() {
             {t('educational')}
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {educationalProjects.map((project, index) => (
+            {educationalProjects.filter(p => !p.hidden).map((project, index) => (
               <Card
                 key={index}
                 data-aos="fade-up"
