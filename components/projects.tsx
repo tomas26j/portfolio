@@ -310,9 +310,13 @@ export default function Projects() {
       description: tContent('empowerDesc'),
       overview: tContent('empowerOverview'),
       images: [
-        getStaticPath("/empower/empower_0.png"),
-        getStaticPath("/empower/empower_1.png"),
-        getStaticPath("/empower/empower_2.png"),
+        getStaticPath("/empower/empower_0.webp"),
+        getStaticPath("/empower/empower_2.webp"),
+        getStaticPath("/empower/empower_3.webp"),
+      ],
+      detailImages: [
+        getStaticPath("/empower/empower_4.webp"),
+        getStaticPath("/empower/empower_5.webp"),
       ],
       tech: ["TypeScript", "NestJS", "Next.js 14", "Prisma", "PostgreSQL", "Docker", "Vitest"],
       techDetails: {

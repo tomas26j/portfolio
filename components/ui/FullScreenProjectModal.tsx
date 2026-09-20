@@ -10,6 +10,7 @@ interface Project {
   description: string
   overview?: string
   images: string[]
+  detailImages?: string[]
   tech: string[]
   techDetails?: {
     frontend?: string[]
@@ -78,25 +79,32 @@ export const FullScreenProjectModal: React.FC<FullScreenProjectModalProps> = ({ 
           )}
 
           {/* Screenshots */}
-          {project.images && project.images.length > 0 && (
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-2xl">{t('screenshots')}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  <div className="relative aspect-video rounded-lg overflow-hidden border">
-                    <img
-                      src={project.images[0] || "/placeholder.svg"}
-                      alt={`${project.title} Screenshot 1`}
-                      className="object-cover w-full h-full"
-                    />
+          {(() => {
+            const shots = project.detailImages && project.detailImages.length > 0
+              ? project.detailImages
+              : project.images?.slice(0, 1) ?? [];
+            if (shots.length === 0) return null;
+            return (
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-2xl">{t('screenshots')}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className={shots.length > 1 ? "grid grid-cols-1 sm:grid-cols-2 gap-4" : ""}>
+                    {shots.map((src, i) => (
+                      <div key={i} className="relative rounded-lg overflow-hidden border">
+                        <img
+                          src={src}
+                          alt={`${project.title} Screenshot ${i + 1}`}
+                          className="w-full h-auto object-cover"
+                        />
+                      </div>
+                    ))}
                   </div>
-                  {/* Si hay más de una imagen, mostrar miniaturas o controles aquí si se desea */}
-                </div>
-              </CardContent>
-            </Card>
-          )}
+                </CardContent>
+              </Card>
+            );
+          })()}
 
           {/* Features */}
           {project.features && project.features.length > 0 && (
