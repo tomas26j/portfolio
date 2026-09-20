@@ -174,9 +174,9 @@ const CertificationCarousel: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="flex gap-3 mt-8 justify-end flex-wrap">
+                <div className="flex flex-col sm:flex-row gap-3 mt-8 justify-center">
                   <button
-                    className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-border hover:bg-muted transition-colors text-sm"
+                    className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg border border-border hover:bg-muted transition-colors text-sm w-full sm:flex-1 sm:max-w-xs"
                     onClick={() => setSelectedIndex(null)}
                   >
                     <ArrowLeft className="h-4 w-4" />
@@ -187,7 +187,7 @@ const CertificationCarousel: React.FC = () => {
                       href={selectedCert.linkInsignia}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors text-sm font-medium"
+                      className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors text-sm font-medium w-full sm:flex-1 sm:max-w-xs"
                     >
                       <ExternalLink className="h-4 w-4" />
                       Ver certificado
