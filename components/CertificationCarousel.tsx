@@ -30,7 +30,7 @@ const CertificationCarousel: React.FC = () => {
     {
       titulo: t('oracleTitle'),
       descripcion: t('oracleDesc'),
-      linkInsignia: "#",
+      linkInsignia: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=E8B79F0DADADE2E0839FB5169907B0BEC4B2B487657CD18FF8C32AE0F6EAE090",
       urlImagen: getStaticPath("/certifications/oracle_agentic-ai-badge.webp")
     },
     {

@@ -90,7 +90,7 @@ export default function Hero() {
           </div>
         </div>
         <div className="relative w-full h-[500px] flex items-center justify-center">
-          <div className="absolute w-[60%] aspect-square rounded-full bg-foreground/10 blur-2xl" />
+          <div className="absolute w-[400px] h-[400px] rounded-full bg-foreground/10 blur-2xl" />
           <Image
             src={getStaticPath("/Perfil-(1).png")}
             alt="Retrato"
