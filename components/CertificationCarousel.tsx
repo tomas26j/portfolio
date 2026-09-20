@@ -60,31 +60,35 @@ const CertificationCarousel: React.FC = () => {
           <span className="text-muted-foreground">05.</span> {t('heading')}
         </h2>
 
-        {/* Vista compacta: fila de badges */}
-        <div className="flex flex-wrap gap-6 items-center mb-8">
+        {/* Vista compacta: grid responsive de badges */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 mb-10">
           {certifications.map((cert, index) => (
             <div
               key={index}
-              className="relative w-[80px] h-[80px] transition-transform duration-200 hover:scale-110 cursor-pointer"
+              className="flex items-center justify-center cursor-pointer"
               title={cert.titulo}
               onClick={() => setModalOpen(true)}
             >
-              <Image
-                src={cert.urlImagen}
-                alt={cert.titulo}
-                fill
-                className="object-contain"
-              />
+              <div className="relative w-full aspect-square max-w-[180px] transition-transform duration-200 hover:scale-110">
+                <Image
+                  src={cert.urlImagen}
+                  alt={cert.titulo}
+                  fill
+                  className="object-contain"
+                />
+              </div>
             </div>
           ))}
         </div>
 
-        <button
-          onClick={() => setModalOpen(true)}
-          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors text-sm font-medium"
-        >
-          Ver todas las certificaciones ({certifications.length})
-        </button>
+        <div className="flex justify-center">
+          <button
+            onClick={() => setModalOpen(true)}
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors text-sm font-medium"
+          >
+            Ver todas las certificaciones ({certifications.length})
+          </button>
+        </div>
       </div>
 
       {/* Modal */}
