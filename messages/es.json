@@ -60,7 +60,9 @@
     "section": "Educación",
     "heading": "Mi Trayectoria Académica",
     "mentoria": "Mentoría Profesional",
-    "mentoriaDesc1": "Mentoría de 5 meses con foco en crecimiento técnico, preparación para entrevistas y proyectos paralelos.",
+    "mentoriaDesc1": "Mentoría individual de 5 meses con un profesional de Globant: guía personalizada sobre crecimiento técnico, empleabilidad y proyección de carrera.",
+    "mentoriaDesc2": "Inmersión en la cultura empresarial IT real: dinámicas de equipo, metodologías ágiles (Scrum/Kanban), herramientas profesionales (Jira, Slack, Teams) y buenas prácticas de comunicación corporativa.",
+    "mentoriaDesc3": "Preparación activa para el mercado laboral: simulacros de entrevistas técnicas, estrategia de búsqueda con metodología STAR, optimización de LinkedIn y networking profesional.",
     "bachelor": "Licenciatura en Ciencia de Datos",
     "bachelorDesc1": "Actualmente cursando la Licenciatura en Ciencia de Datos en UNSAM.",
     "bachelorDesc2": "Mi objetivo es adquirir habilidades de análisis de datos para resolver problemas reales y contribuir al desarrollo de soluciones innovadoras.",
@@ -92,18 +94,6 @@
     "sandboxDesc": "— Mira demos, detalles y documentación"
   },
   "projectsContent": {
-    "cancunTitle": "Cancun.com.ar",
-    "cancunDesc": "Sitio de viajes creado con WordPress y JavaScript. Inspirado en la plantilla de viajes de CosmoWP, ofrece una experiencia intuitiva para explorar destinos en Cancún y reservar viajes.",
-    "cancunOverview": "Sitio de viajes con reservas y exploración de destinos en Cancún, México.",
-    "cancunFeature1": "Reserva de viajes y servicios en línea",
-    "cancunFeature2": "Exploración de destinos turísticos en Cancun.",
-    "cancunChallenge1": "Integración múltiples links de referidos.",
-    "cancunSolution1": "Diseño y adaptacion de contenidos para links de referidos.",
-    "cancunResult1": "Media de 400 clicks mensuales en links de referidos",
-    "cancunPhase1": "Desarrollo inicial",
-    "cancunDuration1": "3 semanas",
-    "cancunPhaseDesc1": "Diseño y desarrollo completo de la plataforma base y funcionalidades del sitio web.",
-    
     "playaMarlinTitle": "Playa Marlin",
     "playaMarlinDesc": "Sitio de viajes creado con WordPress y JavaScript. Inspirado en la plantilla de viajes de CosmoWP, ofrece una experiencia intuitiva para explorar Playa Marlin y reservar viajes.",
     "playaMarlinOverview": "Sitio de viajes con reservas y exploración de destinos.",
@@ -218,7 +208,20 @@
     "ulpanResult1": "Sistema completo funcional con SPA React, API Laravel, integraciones de pago, soporte RTL para hebreo y motor de evaluación automática; base preparada para escalado.",
     "ulpanPhase1": "Desarrollo y despliegue",
     "ulpanDuration1": "Enero 2026 - Actualidad",
-    "ulpanPhaseDesc1": "Implementación de arquitectura fullstack, integración de pasarelas de pago, desarrollo del motor de evaluación, soporte RTL y optimización de consultas con índices."
+    "ulpanPhaseDesc1": "Implementación de arquitectura fullstack, integración de pasarelas de pago, desarrollo del motor de evaluación, soporte RTL y optimización de consultas con índices.",
+
+    "empowerTitle": "Empower",
+    "empowerDesc": "Plataforma fullstack de gestión de recursos humanos con NestJS + Next.js 14, orientada a equipos de software: dashboards de administración, filtros sincronizados con URL y flujos diferenciados por rol.",
+    "empowerOverview": "Plataforma de gestión fullstack con roles diferenciados (admin/público), endpoints RESTful con RBAC y consultas optimizadas con Prisma.",
+    "empowerFeature1": "Dashboards de administración con vistas públicas y paneles por rol, con filtros sincronizados dinámicamente con la URL.",
+    "empowerFeature2": "Endpoints RESTful con autenticación, permisos RBAC diferenciados y validaciones robustas en NestJS.",
+    "empowerFeature3": "Enfoque TDD con Vitest, planificación previa a la implementación y prácticas de Clean Code: refactorización de componentes para testabilidad y desacoplamiento de UI.",
+    "empowerChallenge1": "Coordinar lógica fullstack compleja en un monorepo con equipos distribuidos, manteniendo consistencia entre contratos API, migraciones de base de datos y cobertura de tests.",
+    "empowerSolution1": "Clean Architecture con Prisma como capa de persistencia, separación estricta de responsabilidades (dominio/aplicación/infraestructura), TDD desde el primer ticket y cultura de code review.",
+    "empowerResult1": "Funcionalidades de plataforma productiva implementadas en sprints iterativos: autenticación, gestión de recursos, filtros avanzados, dashboards admin y flujos de rol público/privado.",
+    "empowerPhase1": "Desarrollo iterativo (sprints)",
+    "empowerDuration1": "Abril 2026 - Presente",
+    "empowerPhaseDesc1": "Implementación de autenticación, endpoints RESTful con RBAC, dashboards admin, vistas públicas con filtros URL y refactorizaciones orientadas a testabilidad."
   },
   "miniProjects": {
     "meliTitle": "Clon de la UI de Mercado Libre",
@@ -243,7 +246,9 @@
     "osbTitle": "Fundamentos de Sistemas Operativos",
     "osbDesc": "Cisco certifica que el portador de esta insignia completó exitosamente el curso Fundamentos de Sistemas Operativos y alcanzó el nivel de estudiante. Posee conocimientos fundamentales sobre sistemas operativos, conceptos básicos, seguridad y configuración de conectividad y correo en dispositivos móviles.",
     "eit2Title": "Inglés para IT 2",
-    "eit2Desc": "Inglés nivel B2 CEFR, Peticiones Corteses, Verbos Modales Avanzados, Vocabulario de Soporte al Cliente, Vocabulario de Redes, 'They' como singular, Oraciones Hendidas, Vocabulario de Cloud Computing, Vocabulario de Software, Modo Subjuntivo, Deducciones Lógicas, Vocabulario para Actualizar Colegas, Compartir Feedback, Conjunciones, Tiempos Verbales Avanzados."
+    "eit2Desc": "Inglés nivel B2 CEFR, Peticiones Corteses, Verbos Modales Avanzados, Vocabulario de Soporte al Cliente, Vocabulario de Redes, 'They' como singular, Oraciones Hendidas, Vocabulario de Cloud Computing, Vocabulario de Software, Modo Subjuntivo, Deducciones Lógicas, Vocabulario para Actualizar Colegas, Compartir Feedback, Conjunciones, Tiempos Verbales Avanzados.",
+    "oracleTitle": "Oracle Agentic AI Certified Foundations Associate",
+    "oracleDesc": "Oracle certifica al portador de esta insignia como Oracle Agentic AI Certified Foundations Associate (1Z0-1157-26). Cubre arquitectura de agentes IA: diferencias entre agente, chatbot y workflow; loop de ejecución ReAct; frameworks como LangChain y Model Context Protocol (MCP); OpenAI Agents SDK y Responses API; e implementación de agentes en Oracle Cloud (OCI Enterprise AI) y Oracle AI Database. Válida hasta septiembre 2028."
   },
   "contactSection": {
     "heading": "Contáctame",
@@ -277,6 +282,7 @@
     "backend": "Backend",
     "database": "Base de Datos",
     "deployment": "Despliegue",
-    "tools": "Herramientas"
+    "tools": "Herramientas",
+    "close": "Cerrar"
   }
 } 

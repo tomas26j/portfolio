@@ -1,7 +1,8 @@
 import React from "react"
+import Link from "next/link"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { CheckCircle, Code, Zap, Building, BarChart2, Clock, X } from "lucide-react"
+import { CheckCircle, Code, Zap, Building, BarChart2, Clock, X, Github, ExternalLink } from "lucide-react"
 import { useTranslations } from 'next-intl';
 
 interface Project {
@@ -10,6 +11,7 @@ interface Project {
   description: string
   overview?: string
   images: string[]
+  detailImages?: string[]
   tech: string[]
   techDetails?: {
     frontend?: string[]
@@ -78,25 +80,32 @@ export const FullScreenProjectModal: React.FC<FullScreenProjectModalProps> = ({ 
           )}
 
           {/* Screenshots */}
-          {project.images && project.images.length > 0 && (
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-2xl">{t('screenshots')}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  <div className="relative aspect-video rounded-lg overflow-hidden border">
-                    <img
-                      src={project.images[0] || "/placeholder.svg"}
-                      alt={`${project.title} Screenshot 1`}
-                      className="object-cover w-full h-full"
-                    />
+          {(() => {
+            const shots = project.detailImages && project.detailImages.length > 0
+              ? project.detailImages
+              : project.images?.slice(0, 1) ?? [];
+            if (shots.length === 0) return null;
+            return (
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-2xl">{t('screenshots')}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className={shots.length > 1 ? "grid grid-cols-1 sm:grid-cols-2 gap-4" : ""}>
+                    {shots.map((src, i) => (
+                      <div key={i} className="relative rounded-lg overflow-hidden border">
+                        <img
+                          src={src}
+                          alt={`${project.title} Screenshot ${i + 1}`}
+                          className="w-full h-auto object-cover"
+                        />
+                      </div>
+                    ))}
                   </div>
-                  {/* Si hay más de una imagen, mostrar miniaturas o controles aquí si se desea */}
-                </div>
-              </CardContent>
-            </Card>
-          )}
+                </CardContent>
+              </Card>
+            );
+          })()}
 
           {/* Features */}
           {project.features && project.features.length > 0 && (
@@ -293,6 +302,39 @@ export const FullScreenProjectModal: React.FC<FullScreenProjectModalProps> = ({ 
                 </div>
               </CardContent>
             </Card>
+          )}
+        </div>
+
+        {/* Barra de acciones */}
+        <div className="flex flex-col sm:flex-row gap-3 mt-8 justify-center">
+          <button
+            onClick={onClose}
+            className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg border border-border hover:bg-muted transition-colors text-sm w-full sm:flex-1 sm:max-w-xs"
+          >
+            <X className="h-4 w-4" />
+            {t('close')}
+          </button>
+          {project.links.github && project.links.github !== '#' && (
+            <Link
+              href={project.links.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg border border-border hover:bg-muted transition-colors text-sm w-full sm:flex-1 sm:max-w-xs"
+            >
+              <Github className="h-4 w-4" />
+              GitHub
+            </Link>
+          )}
+          {project.links.demo && project.links.demo !== '#' && (
+            <Link
+              href={project.links.demo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors text-sm font-medium w-full sm:flex-1 sm:max-w-xs"
+            >
+              <ExternalLink className="h-4 w-4" />
+              Demo
+            </Link>
           )}
         </div>
       </div>

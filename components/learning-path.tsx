@@ -16,7 +16,9 @@ export default function LearningPath() {
       institution: "Globant-ForIT 2026",
       date: "APRIL 2026 - PRESENT",
       description: [
-        t('mentoriaDesc1')
+        t('mentoriaDesc1'),
+        t('mentoriaDesc2'),
+        t('mentoriaDesc3')
       ]
     },
     {

@@ -60,7 +60,9 @@
     "section": "Education",
     "heading": "My Learning Path",
     "mentoria": "Professional Mentorship",
-    "mentoriaDesc1": "5-month mentorship focused on technical growth, interview preparation, and parallel projects.",
+    "mentoriaDesc1": "Individual 5-month mentorship with a Globant professional: personalized guidance on technical growth, employability, and career development.",
+    "mentoriaDesc2": "Immersion in real IT corporate culture: team dynamics, agile methodologies (Scrum/Kanban), professional tools (Jira, Slack, Teams), and corporate communication best practices.",
+    "mentoriaDesc3": "Active job market preparation: technical interview simulations, job-search strategy using the STAR framework, LinkedIn optimization, and professional networking.",
     "bachelor": "Bachelor's degree in Data Science",
     "bachelorDesc1": "Currently pursuing a Bachelor's degree in Data Science at UNSAM.",
     "bachelorDesc2": "My goal is to acquire data analysis skills to solve real-world problems and contribute to the development of innovative solutions.",
@@ -92,18 +94,6 @@
     "sandboxDesc": "— See demos, details and documentation"
   },
   "projectsContent": {
-    "cancunTitle": "Cancun.com.ar",
-    "cancunDesc": "Travel website created with WordPress and JavaScript. Inspired by CosmoWP's travel template, it offers an intuitive user experience for exploring destinations in Cancun and booking trips.",
-    "cancunOverview": "Travel site with booking and destination exploration.",
-    "cancunFeature1": "Online travel booking.",
-    "cancunFeature2": "Tourist destination exploration.",
-    "cancunChallenge1": "Integrate multiple payment methods.",
-    "cancunSolution1": "Implementation of secure payment gateway.",
-    "cancunResult1": "30% increase in online bookings.",
-    "cancunPhase1": "Initial development",
-    "cancunDuration1": "3 weeks",
-    "cancunPhaseDesc1": "Design and development of the base platform.",
-
     "playaMarlinTitle": "Playa Marlin",
     "playaMarlinDesc": "Sitio de viajes creado con WordPress y JavaScript. Inspirado en la plantilla de viajes de CosmoWP, ofrece una experiencia intuitiva para explorar Playa Marlin y reservar viajes.",
     "playaMarlinOverview": "Sitio de viajes con reservas y exploración de destinos.",
@@ -218,7 +208,20 @@
     "ulpanResult1": "Complete functional system with React SPA, Laravel API, payment integrations, RTL support for Hebrew and automatic evaluation engine; base prepared for scaling.",
     "ulpanPhase1": "Development and deployment",
     "ulpanDuration1": "January 2026 - Present",
-    "ulpanPhaseDesc1": "Implementation of fullstack architecture, payment gateway integration, evaluation engine development, RTL support and query optimization with indexes."
+    "ulpanPhaseDesc1": "Implementation of fullstack architecture, payment gateway integration, evaluation engine development, RTL support and query optimization with indexes.",
+
+    "empowerTitle": "Empower",
+    "empowerDesc": "Fullstack human-resource management platform built with NestJS + Next.js 14, focused on software teams: admin dashboards, URL-synced filters, and differentiated role-based flows.",
+    "empowerOverview": "Fullstack management platform with differentiated roles (admin/public), RESTful endpoints with RBAC, and Prisma-optimized queries.",
+    "empowerFeature1": "Admin dashboards with public views and role-based panels, featuring dynamically URL-synced filters.",
+    "empowerFeature2": "RESTful endpoints with authentication, differentiated RBAC permissions, and robust validations in NestJS.",
+    "empowerFeature3": "TDD-first approach with Vitest, pre-implementation planning, and Clean Code practices: component refactoring for testability and UI decoupling.",
+    "empowerChallenge1": "Coordinate complex fullstack logic in a monorepo with distributed teams, maintaining consistency across API contracts, database migrations, and test coverage.",
+    "empowerSolution1": "Clean Architecture with Prisma as the persistence layer, strict separation of concerns (domain/application/infrastructure), TDD from the first ticket, and a code review culture.",
+    "empowerResult1": "Productive platform features delivered in iterative sprints: authentication, resource management, advanced filters, admin dashboards, and public/private role flows.",
+    "empowerPhase1": "Iterative development (sprints)",
+    "empowerDuration1": "April 2026 - Present",
+    "empowerPhaseDesc1": "Implementation of authentication, RESTful endpoints with RBAC, admin dashboards, public views with URL filters, and testability-oriented refactoring."
   },
   "miniProjects": {
     "meliTitle": "Mercado Libre's UI clone",
@@ -243,7 +246,9 @@
     "osbTitle": "Operating Systems Basics",
     "osbDesc": "Cisco verifies the earner of this badge successfully completed the Operating Systems Basics course and achieved this student level credential. Earner has fundamental knowledge of operating systems by covering the basic concepts and skills needed to explain the purpose and characteristics of operating systems, implement basic operating system security, and explain how to configure mobile device network connectivity and email.",
     "eit2Title": "English for IT 2",
-    "eit2Desc": "English at CEFR B2 level, Polite Requests, Advanced Modal Verbs, Customer Support Vocabulary, Networking Vocabulary, 'They' as singular, Cleft Sentences, Cloud Computing Vocabulary, Software Vocabulary, Subjunctive Mood, Logical deductions, Updating Colleagues Vocabulary, Sharing Feedback Vocabulary, Conjunctions, Advanced Tenses."
+    "eit2Desc": "English at CEFR B2 level, Polite Requests, Advanced Modal Verbs, Customer Support Vocabulary, Networking Vocabulary, 'They' as singular, Cleft Sentences, Cloud Computing Vocabulary, Software Vocabulary, Subjunctive Mood, Logical deductions, Updating Colleagues Vocabulary, Sharing Feedback Vocabulary, Conjunctions, Advanced Tenses.",
+    "oracleTitle": "Oracle Agentic AI Certified Foundations Associate",
+    "oracleDesc": "Oracle certifies the earner of this badge as Oracle Agentic AI Certified Foundations Associate (1Z0-1157-26). Covers AI agent architecture: distinction between agents, chatbots, and workflows; ReAct execution loop; frameworks such as LangChain and Model Context Protocol (MCP); OpenAI Agents SDK and Responses API; and deploying agents on Oracle Cloud (OCI Enterprise AI) and Oracle AI Database. Valid until September 2028."
   },
   "contactSection": {
     "heading": "Contact Me",
@@ -277,6 +282,7 @@
     "backend": "Backend",
     "database": "Database",
     "deployment": "Deployment",
-    "tools": "Tools"
+    "tools": "Tools",
+    "close": "Close"
   }
 } 

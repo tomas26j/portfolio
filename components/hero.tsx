@@ -20,7 +20,7 @@ export default function Hero() {
     setIsDownloading(true);
     try {
       // Intentar descargar el PDF
-      const response = await fetch(getStaticPath('/Tomas_Riera_CV.pdf'));
+      const response = await fetch(getStaticPath('/Tomas-Riera_CV.pdf'));
       
       if (!response.ok) {
         throw new Error('PDF no encontrado');
@@ -30,7 +30,7 @@ export default function Hero() {
       const url = window.URL.createObjectURL(blob);
       const link = document.createElement('a');
       link.href = url;
-      link.download = 'Tomas_Riera_CV.pdf';
+      link.download = 'Tomas-Riera_CV.pdf';
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
