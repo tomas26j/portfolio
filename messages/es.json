@@ -282,6 +282,7 @@
     "backend": "Backend",
     "database": "Base de Datos",
     "deployment": "Despliegue",
-    "tools": "Herramientas"
+    "tools": "Herramientas",
+    "close": "Cerrar"
   }
 } 

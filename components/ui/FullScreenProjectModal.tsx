@@ -1,7 +1,8 @@
 import React from "react"
+import Link from "next/link"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { CheckCircle, Code, Zap, Building, BarChart2, Clock, X } from "lucide-react"
+import { CheckCircle, Code, Zap, Building, BarChart2, Clock, X, Github, ExternalLink } from "lucide-react"
 import { useTranslations } from 'next-intl';
 
 interface Project {
@@ -301,6 +302,39 @@ export const FullScreenProjectModal: React.FC<FullScreenProjectModalProps> = ({ 
                 </div>
               </CardContent>
             </Card>
+          )}
+        </div>
+
+        {/* Barra de acciones */}
+        <div className="flex flex-col sm:flex-row gap-3 mt-8 justify-center">
+          <button
+            onClick={onClose}
+            className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg border border-border hover:bg-muted transition-colors text-sm w-full sm:flex-1 sm:max-w-xs"
+          >
+            <X className="h-4 w-4" />
+            {t('close')}
+          </button>
+          {project.links.github && project.links.github !== '#' && (
+            <Link
+              href={project.links.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg border border-border hover:bg-muted transition-colors text-sm w-full sm:flex-1 sm:max-w-xs"
+            >
+              <Github className="h-4 w-4" />
+              GitHub
+            </Link>
+          )}
+          {project.links.demo && project.links.demo !== '#' && (
+            <Link
+              href={project.links.demo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors text-sm font-medium w-full sm:flex-1 sm:max-w-xs"
+            >
+              <ExternalLink className="h-4 w-4" />
+              Demo
+            </Link>
           )}
         </div>
       </div>
